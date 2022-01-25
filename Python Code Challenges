@@ -72,3 +72,29 @@ elif len(credit_card_number) <15:
     print("You need 16 digits for a calid credit card where as you have only entered:" + (str(len(credit_card_number))))
 else:print("The digits of your credit card number are as follows: **** **** **** **** " + (censored))
 
+
+
+
+
+
+
+# COUNTING OS AND XS IN a string 
+
+string = input("The string I want to enter into the computer is: ")
+time.sleep(1)
+
+x = 'xX'
+o = 'oO'
+
+def function_O(string,o):                                  # function to catch the o 
+    o_loop = [each for each in string if each in o]         #we are looping temporary variables in the string entered to see if they match with the values defined in variable o 
+    amount = len(o_loop)
+    return amount
+
+def function_1(string,x):                                # function to catch the x 
+    x_loop = [each2 for each2 in string if each2 in x]   #we are looping temporary variables in the string entered to see if they match with the values defined in variable x
+    amount2 = len(x_loop)                                #if we just print x_loop it'll print out the number of xs in the word - we are using len to convert the amount of xs into a number which we will show to the user below 
+    return amount2
+
+print("The word you chose was: " + string)
+print("The 'O/o' count is as follows: " + str(function_O(string,o)) + "\nThe X/x count is as follows: " + str(function_1(string,x)))
