@@ -109,4 +109,17 @@ for i in big_number_list:
     if i == -5:
         print("The number I was looking for was " + str(i))
         break
+        
+        
+        
+        
+        
+        
+# Loop control: continue (opposite to break)
+big_number_list = [1, 2, -1, 4, -5, 5, 2, -9]
+
+for number in big_number_list:
+    if number <=1:                           # chained conditional statement 
+        continue                             #continue to loop all numbers less than or equal to 1
+    print(number)                            #indentation has to be correct on this 
 
