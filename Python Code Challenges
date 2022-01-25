@@ -28,3 +28,25 @@ def int_to_binary(question):            #  function to covnert interger values t
     return binary
 
 print("The original value you entered was " + str(original_question) + "\n The corresponding binary value of that interger is: " + str((int_to_binary(question))))
+
+
+
+# checking for vowels and constants in a word (based on user input) 
+
+vowels = "AaEeIiOoUu"
+constants = "bBcCdDfFgGhHjJkKlLmMnNpPqQRsStTvVwWxXyYzZ"
+word = input("Type in a word to check out the amount of vowels it has : ")
+
+def vowels_checker(word, vowels):                           #we created a separate function for vowel checking
+    vowel_loop = [each for each in word if each in vowels]  #each are temp variables looped through our word with the conditional if each that now comprises of the word is in vowels. Confusing.
+    amount = len(vowel_loop)                                #we are looking for the amount i.e. in an interger of times the vowels have came up in the word and are looking to return accordingly
+    return amount
+
+def constant_checker(word, constants):                    #we created a separate function for constant checking
+    constant_loop = [each2 for each2 in word if each2 in constants]      #we are looping temp variables again
+    amount2 = len(constant_loop)
+    return amount2
+
+print("The word you choose is : " + word)
+print("The amount of vowels in your word is " + str(vowels_checker(word, vowels)) + "\nThe amount of constants in your word is " + str(constant_checker(word, constants)))
+
