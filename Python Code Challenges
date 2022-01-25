@@ -50,3 +50,25 @@ def constant_checker(word, constants):                    #we created a separate
 print("The word you choose is : " + word)
 print("The amount of vowels in your word is " + str(vowels_checker(word, vowels)) + "\nThe amount of constants in your word is " + str(constant_checker(word, constants)))
 
+
+
+
+
+
+# credit card user input exercise where we are returning the last 4 digits of a card 
+
+credit_card_number = input("Please input your credit card number: ")       # asking user for their input
+
+list_credit_card_number = []                         # empty list for credit card number in the first instance
+for number in credit_card_number:                    # we are looping temporary variable in the credit card input and appending it to our empty list above
+    list_credit_card_number.append(number)
+
+indexed_card_number = (list_credit_card_number[-1::-5])         #created a new variable to slice the list that we created above (as we only want to show the last four digits
+censored = (" " . join(indexed_card_number))                    #IMPORTANT the " " allowed me to remove the brackets and commas from the list and print just the numbers of the card
+
+if len(credit_card_number) >16:                                   #Conditional statements for when the card is over and below 16 characters long
+    print("Error ! Only 16 characters allowed!")
+elif len(credit_card_number) <15:
+    print("You need 16 digits for a calid credit card where as you have only entered:" + (str(len(credit_card_number))))
+else:print("The digits of your credit card number are as follows: **** **** **** **** " + (censored))
+
