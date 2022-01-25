@@ -98,3 +98,24 @@ def function_1(string,x):                                # function to catch the
 
 print("The word you chose was: " + string)
 print("The 'O/o' count is as follows: " + str(function_O(string,o)) + "\nThe X/x count is as follows: " + str(function_1(string,x)))
+
+
+
+
+
+
+# function to calculate fixed 20% discount on an item 
+
+full_price = int(input("Enter your number:"))
+
+def discount(full_price):
+    first_price = 0.20 * full_price
+    final_price = full_price - first_price
+    return final_price
+
+print("your total price including discount for that item is : " + str((discount(full_price))))
+
+
+
+
+
