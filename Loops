@@ -78,6 +78,7 @@ while index < length:         # while 0 is less than 4
 
 
 
+
 # loop control (Break) statement
 
 dog_breeds_available_for_adoption = ["french_bulldog", "dalmatian", "shihtzu", "poodle", "collie"]
@@ -95,4 +96,17 @@ for i in dog_breeds_available_for_adoption:      # looped temp variable
 #    print(dog_breeds_available_for_adoption[index]); index+=1     #looping through the list of breeds
 
 
+
+
+
+
+# loop control (Break) statement - finding a number in a list 
+
+big_number_list = [1, 2, -1, 4, -5, 5, 2, -9]
+
+for i in big_number_list:
+    print(i)
+    if i == -5:
+        print("The number I was looking for was " + str(i))
+        break
 
