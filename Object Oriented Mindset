@@ -1,0 +1,7 @@
+Scenario 1: a txt file has all of the information about the employees at a company. We need to write a program that reasd the information from the external file and stores it in memory by first, last and salary of each employee. For the salary. We want one list that holds ALL the data.
+
+a) we would need functions to add employee data, last / first name and salary: our function would callable(- extract first name, extract last name, compute salary)
+
+We need to think about how to approach big problems and make them smaller i.e the add employee function is the big one and the smaller functions to take the first name, last name and salary are smaller and necessary functions to solve our problems.
+
+
