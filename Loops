@@ -77,3 +77,22 @@ while index < length:         # while 0 is less than 4
 
 
 
+
+# loop control (Break) statement
+
+dog_breeds_available_for_adoption = ["french_bulldog", "dalmatian", "shihtzu", "poodle", "collie"]
+dog_breed_I_want = "dalmatian"
+list = len(dog_breeds_available_for_adoption)
+index = 0
+
+for i in dog_breeds_available_for_adoption:      # looped temp variable 
+    print(i)                               # printing full list 
+    if i == "dalmatian":                   #conditional to print a statement if dalmation is in list
+        print("They have a " + i) 
+        break                             # break to stop printing any futher items on the list 
+
+#while index < list:
+#    print(dog_breeds_available_for_adoption[index]); index+=1     #looping through the list of breeds
+
+
+
