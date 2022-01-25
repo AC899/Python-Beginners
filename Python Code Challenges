@@ -19,3 +19,12 @@ print("The result of converting " + str(originalradian) + " radians into degrees
 
 
 
+# Converting intergers into binary numbers 
+question = int(input("Enter the number you want to convert into a binary figure : "))   # we are taking interger inputs (not floats i.e. it will crash if you type .5) E
+original_question = question
+
+def int_to_binary(question):            #  function to covnert interger values to binaries which takes the input from the variable question and calculates binary off the back of it
+    binary = bin(question)
+    return binary
+
+print("The original value you entered was " + str(original_question) + "\n The corresponding binary value of that interger is: " + str((int_to_binary(question))))
