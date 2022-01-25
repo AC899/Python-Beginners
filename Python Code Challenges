@@ -143,3 +143,23 @@ def strings(string):
 print(strings(string))
 
 
+
+
+
+#counting letters in words BUT doesn't make a distinction between upper and lower case letters 
+
+from collections import Counter
+
+# string = input"Enter the letter you want to count the unique values for: "
+#print("The letter you entered was: " + string)      loop through letter in letters
+
+def countDis(str):
+    # Stores all frequencies
+    freq = Counter(str)
+    # Return the size of the freq dictionary
+    return len(freq)
+
+print(countDis("AaAa"))
+
+
+
