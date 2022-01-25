@@ -50,6 +50,30 @@ countdown = 10                             # number we are counting down from / 
 while countdown >=0:                    #
   print("We have liftoff! in " + str(countdown));countdown -=1   #  the -=1 is used to represent subtraction
 
+countdown = 10                 # counting from
+while countdown >=0:            # counting to 
+    print(countdown);countdown-=1      # using -=1 to repreent we are going down 1 on each loop 
+
+
+
+
+# WHILE LOOPS - in lists 
+
+
+ingredients = ["milk", "sugar", "vanilla extract", "dough", "chocolate"]
+length = len(ingredients)     # we are using a while (indefinite loop) so it needs to know the length of the list
+countdown = 0              # we are starting our  count at 0
+
+while countdown < length:    # we are comparing our countdown variable to the to length of ingredients
+    print(ingredients[countdown]);countdown+=1  #this prints out the actual words of the index as opposed to the numbers
+#    print(countdown); countdown+=1           # This counts the 4 indexes of the list
+
+
+python_topics = ["variables", "control flow", "loops", "modules", "classes"]  # we have a list of statements
+length = len(python_topics)   # ascertaining the length of python topics
+index = 0                     # index counter is starting at 0
+while index < length:         # while 0 is less than 4
+  print(" I am learning about " + python_topics[index]); index+=1    # while 0 is less
 
 
 
