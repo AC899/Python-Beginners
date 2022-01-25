@@ -37,8 +37,8 @@ print(cubes)
 # a while loop forms an indefinite iteration
 #
 
-count = 0            # indented for a counter
-while count <=3:     # means loop indefinitely until count (set to 0 above) is less than or equal to 3. When it gos above 4 it ceases to be true so the counter will stop.
+count = 0            # indented - NUMBER WE START COUNT DOWN
+while count <=3:     # NUMBER WE COUNTDOWN / COUNTUP TO (set to 0 above) is less than or equal to 3. When it gos above 4 it ceases to be true so the counter will stop.
     print(count)    # tells us to print to the console
     count +=1        # += adds the value to the variable (count) and assigns the result to the variable
 
