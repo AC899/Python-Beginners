@@ -98,8 +98,6 @@ for i in dog_breeds_available_for_adoption:      # looped temp variable
 
 
 
-
-
 # loop control (Break) statement - finding a number in a list 
 
 big_number_list = [1, 2, -1, 4, -5, 5, 2, -9]
@@ -114,7 +112,6 @@ for i in big_number_list:
         
         
         
-        
 # Loop control: continue (opposite to break)
 big_number_list = [1, 2, -1, 4, -5, 5, 2, -9]
 
@@ -122,4 +119,29 @@ for number in big_number_list:
     if number <=1:                           # chained conditional statement 
         continue                             #continue to loop all numbers less than or equal to 1
     print(number)                            #indentation has to be correct on this 
+
+
+
+# Nested Loops and lists
+
+project_teams = [["Ava", "Samantha", "James"], ["Lucille", "Zed"], ["Edgar", "Gabriel"]]
+
+for i in project_teams:
+    #    print(i)                         This would print the project in its obvious list format
+    for ii in i:
+        print("In this list we have the following students " + ii)                          #the nested loop prints each individual element of the list
+        
+        
+
+sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
+
+scoops_sold = 0
+
+for i in sales_data:
+    #    print(i)                                  This will print the list in its full form as sales data - not what we want if we want to add each part together 
+    for ii in i:                                   # nested loop breaks the amounts down into individual amounts 
+        scoops_sold += ii                          # we are adding the total value of sales data to the loop
+
+print("The sales data shows the following sales data " + str(sales_data) + "\nThis means that the total number of scoops sold was: " + str(scoops_sold))
+
 
