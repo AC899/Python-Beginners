@@ -1,0 +1,21 @@
+# radians to degrees converter function with user input - simple 
+
+import time
+import math
+
+greeting = input("What is your name ? ")
+time.sleep(1)
+print("Hello, " + greeting)
+time.sleep(1)
+radian = int(input("Please input the number of radians you wish to convert into degrees : "))
+originalradian = radian     # saving the original amount they input as a variable so it can be replicated before being calculated - see below
+
+def conversion(radian):                  #radian is the variable with our user input so we assign it as the input on our function i.e. so the number they enter becomes is calculated through the function
+    pi_value = math.pi                   #
+    degree = (radian*180)/pi_value
+    return degree
+
+print("The result of converting " + str(originalradian) + " radians into degrees is: " + str(conversion(radian)))
+
+
+
