@@ -1,0 +1,17 @@
+TensorFlow - AI and machine learning 
+PyTorch - neural networks AI and machine learning (alternative to tensor flow) 
+
+Numpy - allows you to use mathematical functions as python functions (saves you doing equations and data analytical numbers) 
+Panda - allows you to make analytics out of the dataset that you have
+Matplotlib - allows you to create pie charts and data from information 
+
+OpenCV - image processing application (self-driving car, object detection mode): everything that involved a computer generation model You can build face detection
+or object detection.
+Pillow - image processing application (alternative to OpenCV)
+
+Textblob - NLP (natural language processing) 
+
+Beautiful Soup (BS4) - web scraping library allows you to take data from any website. Easy to get data from any kind of website. 
+
+Tinkter- allows you to build python applications with GUI interfaces. 
+
