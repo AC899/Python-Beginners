@@ -118,4 +118,28 @@ print("your total price including discount for that item is : " + str((discount(
 
 
 
+# Function to cut all of the strings out of an input and only leave the intergers behind 
+
+string = input("Enter your word")
+
+def function(string):
+    strings = string.strip('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    return strings
+
+print(function(string))
+
+
+
+
+
+#doubling up the letters in a word i.e. so a string input of argh becomes aarrgghh
+
+string = input("Type in your poisionous turd word")
+
+def strings(string):
+    amended = "".join([x*2 for x in string])
+    return amended
+
+print(strings(string))
+
 
