@@ -145,3 +145,16 @@ for i in sales_data:
 print("The sales data shows the following sales data " + str(sales_data) + "\nThis means that the total number of scoops sold was: " + str(scoops_sold))
 
 
+
+
+
+# List comprehensions (using loops in a list)
+
+grades = [90, 88, 62, 76, 74, 89, 48, 57]
+scaled_grades = [scaled * 10 for scaled in grades]     # temporary variable * X for temporary variable in variable we want to loop through
+
+print(scaled_grades)
+
+numbers = [2, -1, 79, 33, -45]
+doubled = [num * 5 for num in numbers]
+print(doubled)
