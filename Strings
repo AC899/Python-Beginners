@@ -1,0 +1,15 @@
+# counting the amount of times letters appear in a string 
+
+letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+
+def count(word):
+    uniques = 0
+    for letter in letters:                        # looping our temp variable through our defined variable iwth the letters - temp variable now has same value as letters. we then state that if the temp variable have any of the letters in the letters variable we are g oing to add 1 to the counter for each time. 
+        if letter in word:
+            uniques += 1
+    return uniques
+
+
+print(count("mississippi"))                        # there are 4 unique letters in this string 
+
+
