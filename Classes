@@ -1,0 +1,16 @@
+
+
+# class variables 
+
+class Monkey():   
+  weight = "Monkey"               #indented variable assigned string value 
+
+body = Monkey()                   #assign a variable to the Class outisde of the indentation
+print(body.weight)                #access the class variable by using above.classvariable name 
+
+
+class Donkey():                 #same thing as above.
+  age = 10
+
+donkey_age = Donkey()
+print(donkey_age.age)
