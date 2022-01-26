@@ -1,0 +1,27 @@
+
+
+
+# returning true if input is divisble by 10 - finally a practical use of the modulus operator. 
+
+def divisible_by_ten(num):                        # first way of doing it 
+    a = num % 10
+    if a <= 0:
+        return True
+    else:
+        return False
+
+print(divisible_by_ten(20))
+# should print True
+print(divisible_by_ten(25))
+# should print False
+
+
+def divisible_by_ten(num):                     # second way of doing it 
+    if (num % 10 ==0):
+        return True
+    else:
+        return False
+
+print(divisible_by_ten(20))
+
+print(divisible_by_ten(25))
