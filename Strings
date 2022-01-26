@@ -98,3 +98,19 @@ flags = re.IGNORECASE                     #we are ignoring all instances of case
 result = re.findall(pattern1, string1, flags)
 print(result)
 
+
+
+
+
+
+#returning true if name is in sentence in lowercase 
+
+def check_for_name(sentence, name):
+    return name.lower() in sentence.lower()             #This will return true of false depending whther name lowercase is in sentence in lowercase
+
+print(check_for_name("My name is Jamie", "Jamie"))
+
+
+
+
+
