@@ -1,0 +1,12 @@
+# creating for loop that loops through dictionaries adding up their VALUES
+
+def sum_values(myDict):
+    sum_value = 0
+    for i in myDict.values():
+        sum_value += i
+    return sum_value
+
+print(sum_values({"milk":5, "eggs":2, "flour": 3}))
+
+
+
