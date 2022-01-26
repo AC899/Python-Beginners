@@ -13,3 +13,59 @@ def count(word):
 print(count("mississippi"))                        # there are 4 unique letters in this string 
 
 
+
+
+
+
+# counting the amount of times a number appears in a string
+
+numbers = "1234567890"
+
+def number(entry):
+    counter = 0
+    for temp in numbers:
+        if temp in entry:
+            counter +=1
+    return counter
+
+print(number("112223"))
+
+
+
+# counting the amount of times  letter appears in a string
+
+def number(word, x):
+    count = 0
+    for temp in word:                          # looping our temp variable through the word we are in putting
+        if temp in x:                           # each temp a character in word is in x(the parameter we are looking for) we are adding a +1 to the  counter
+            count +=1                          #Note: we can change the counter to 2 / 3 so it doubles or triples. Wahtever we put here we are incrasing i.e.  +=5 
+    return count
+
+print(number("mississippi", "s"))
+
+
+
+
+
+# counting the amount of times punctuation marks appear in a string
+
+punctuation = "!@£$%^&*)"
+
+def number(entry):
+    counter = 0
+    for temp in punctuation:
+        if temp in entry:
+            counter +=1
+    return counter
+
+
+print(number("Hello!@!%%"))
+
+
+
+
+
+
+
+
+
