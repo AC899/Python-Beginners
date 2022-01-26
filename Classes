@@ -14,3 +14,25 @@ class Donkey():                 #same thing as above.
 
 donkey_age = Donkey()
 print(donkey_age.age)
+
+
+
+
+
+#simple class creation
+
+class Drivebot():
+     def __init__(self):                            #This is a basic constructor within a class
+        self.motor_speed = 0                          #instance variables set to default to 0
+        self.sensor_range = 0
+        self.direction = 0
+
+robot_1 = Drivebot()                               #creating an object from the class - saving the class to a variable
+print(robot_1.sensor_range)
+
+def control_bot(self,new_speed,new_direction):        #we are adding a method to the  class called controlbot to the drivebot class
+    self.motor_speed = new_speed                    #speed variable is becoming new speed  
+    self.direction = new_direction                    #direction variable is becoming new direction 
+    
+def adjust_sensor(self,new_sensor_range):            #we are adding a method to the class called adjust sensor 
+    self.sensor_range = new_sensor_range            #wsensor range variable is being replaced by new sensor range 
