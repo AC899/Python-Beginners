@@ -163,3 +163,21 @@ print(countDis("AaAa"))
 
 
 
+
+
+#Input for strings and intergers BUT only returns the numbers you put in .... various methods 
+
+import re
+
+def removing_letters(string):
+    pattern = '([^ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz])'
+    str_ = string
+    no_vowel_list = re.findall(pattern, str_)                #re.findall(searching to exclude words specified in the pattern that are found in the string and return result as a list )
+    censored = (",".join(no_vowel_list))                     #converting list made by re into a non list looking readable format i.e. we can we swap out the space for a comma or : etc
+    return censored
+
+print(removing_letters("9s8afasf9safas2235"))
+
+
+
+
