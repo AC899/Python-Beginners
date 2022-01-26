@@ -123,3 +123,28 @@ def every_other_letter(word):
 print(every_other_letter("Codecademy"))
 print(every_other_letter("Hello world!"))
 
+
+
+
+
+# reversing a string so as that it reads backwards 
+
+def reverse_string(word):
+    new = word[::-1]                            # assigned a new variable to our function input and we are starting reading it at -1 on the index of the string i.e. the end 
+    return new
+
+print(reverse_string("ikessdaM"))
+
+
+
+def reverse_string(word):                        # this is the codecademy recommendation which the same result was achieved through the use of teh above 
+  reverse = ""
+  for i in range(len(word)-1, -1, -1):           # looping in range that is the length of the word we are incrementing from -1 i.e. the end, the end, the end as the loop works through from the back 
+    reverse += word[i]                           # adding to the empty string (reverse) the values of the loop i (which is looping backwards through the word) 
+  return reverse                                  # return reverse
+
+print(reverse_string("ikessdaM"))
+
+
+
+
