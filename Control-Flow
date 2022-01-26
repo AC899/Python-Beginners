@@ -65,3 +65,50 @@ print(not_sum_to_ten(5,5))
 
 
 
+
+# basic conditional statements  
+
+def in_range(num,lower,upper):
+    if num >= lower and num <= upper:
+        return True
+    else:
+        return False
+
+print(in_range(10, 10, 10))
+# should print True
+print(in_range(5, 10, 20))
+
+
+
+
+
+
+
+# return False no matter 
+ 
+def always_false(num):                    # first method 
+        return False
+
+print(always_false(0))
+print(always_false(-1))
+
+
+
+def always_false(num):                       # second method 
+  if (num > 0 and num < 0):
+    return True
+  else:
+    return False
+
+
+
+
+
+
+
+
+
+
+
+
+
