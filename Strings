@@ -82,3 +82,19 @@ def wordchecker(entry, x):
 
 
 
+
+
+
+#Grabbing lists of phrases or words from strings 
+
+pattern = '[efg]+'                         #this is the pattern / characters we are looking for in the string
+string = 'abc---cab-efg_webe'               #this will print ALL instances of the letters i.e. e is printed twice because it's in tehre twice
+result = re.findall(pattern, string)
+print(result)
+
+pattern1 = '[abc]+'                           #grabbing words or phrases from paragraphs 
+string1 = 'aBC---CAB-eFg_web'
+flags = re.IGNORECASE                     #we are ignoring all instances of case so in th above we are just grabbing a / A from the list.
+result = re.findall(pattern1, string1, flags)
+print(result)
+
