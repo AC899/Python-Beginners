@@ -107,6 +107,26 @@ def always_false(num):                       # second method
 
 
 
+# using multiple return staements that print when condition is met alongside multiple if statements within a function 
+
+
+def movie_review(rating):
+  if(rating <= 5):
+    return "Avoid at all costs!"
+  if(rating < 9):
+    return "This one was fun."
+  return "Outstanding!"
+
+
+
+def movie_review(rating):
+    if rating <=5:
+        return("Avoid at all costs")                  # using multiple return statements to print and if statemnet conditionals alongside
+    if rating <9:
+        return("This one was fun")
+    return("Outstanding")                             # Indentation has to be correct when using a bunch of return statements that print
+
+
 
 
 
