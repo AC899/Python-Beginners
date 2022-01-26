@@ -20,3 +20,15 @@ def sum_even_keys(my_dictionary):
   return total
 
 print(sum_even_keys({1:5, 2:2, 3:3}))            
+
+
+
+
+# adding a specific interger to ALL keys in the dictionary
+
+def add_ten(my_dictionary):
+  for key in my_dictionary.keys():
+    my_dictionary[key] += 10
+  return my_dictionary
+
+print(add_ten({1:5, 2:2, 3:3}))
