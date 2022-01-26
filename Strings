@@ -114,3 +114,12 @@ print(check_for_name("My name is Jamie", "Jamie"))
 
 
 
+#returning every second letter of a string
+
+def every_other_letter(word):
+    every_second_letter = word[::2]       #we are grabbing every second character of the string i.e. index 2 in the string 
+    return every_second_letter
+
+print(every_other_letter("Codecademy"))
+print(every_other_letter("Hello world!"))
+
