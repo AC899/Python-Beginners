@@ -10,3 +10,13 @@ print(sum_values({"milk":5, "eggs":2, "flour": 3}))
 
 
 
+# https://www.makeuseof.com/how-to-loop-through-a-python-dictionary/  - adding the value from the even key within a dictionary 
+
+def sum_even_keys(my_dictionary):
+  total = 0
+  for key in my_dictionary.keys():                     # looping in mydictionary.keys. .keys is a special thing and will always be the same syntax 
+    if key%2 == 0:                                     # if the key is even - add the value from the even key 
+      total += my_dictionary[key]          # the dictionary values to the total above 
+  return total
+
+print(sum_even_keys({1:5, 2:2, 3:3}))            
