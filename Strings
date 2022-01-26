@@ -65,6 +65,19 @@ print(number("Hello!@!%%"))
 
 
 
+# function that takes a letter and then prints the amount of times the letter appears in teh word AND the actual words found
+
+entry = input("Enter the word you are lookng to unique letters in : ")
+x = input("Enter the unique character you are looking to find: ")
+
+def wordchecker(entry, x):                                
+    counter = 0
+    for temp in entry:                                      # looping through our entry word with temp variable 
+        if temp in x:                               # running our entry word (with the temp variabl that contains the same data) through the x variable which contains the word we are looking for 
+            counter+=1                             # adding a +1 to the counter for every time the x is in word 
+            duplicatesfound = x                         
+    return("This was the letter you were looking to find in your entry:  " + str(duplicatesfound) + "\nTherefore: the number of duplicate leters is: " + str(counter))
+
 
 
 
