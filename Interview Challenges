@@ -45,3 +45,30 @@ print(converted_set)
 
 
 
+6) How to count the occurrences of a particular element in the list?
+
+weekdays = ['sun','mon','tue','wed','thu','fri','sun','mon','mon']
+print(len(weekdays))
+
+
+
+7) What is NumPy array?
+NumPy arrays are more flexible then lists in Python. By using NumPy arrays reading and writing items is faster and more efficient.
+
+8) How can you create Empty NumPy Array In Python?
+We can create Empty NumPy Array in two ways in Python,
+import numpy
+numpy.array([])
+
+
+
+12) What is Enumerate() Function in Python?
+#enumerate adds a counter to a loopable object i.e. gives us a way of counting based on the below
+subjects = ('Python', 'Interview', 'Questions') 
+for i, subject in enumerate(subjects):            #loop temp variable in temp variable in enumerate(object we want to loop through)
+    print(i, subject)                            #print the numbers, subject 
+
+
+
+
+
