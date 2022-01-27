@@ -202,7 +202,7 @@ else:
 
 
 
-# very neat way of doing a game  
+# Game. Neat. Roll 12 on the dice
 player1_score = 0
 player2_score = 0
 
@@ -232,3 +232,27 @@ for i in range(10):
 print("### Game Over ###")
 print("Player 1 score:", player1_score)
 print("Player 2 score:", player2_score)
+
+
+
+
+
+
+#   Simple question game with counter 
+
+count = 0
+
+while True:               # looping the question below continuously 
+    question1 = int(input("What is the capital of UK ? \n1.London\n2.Brighton\3.Birmingham"))   
+    if question1 == 1:
+        count +=1          # add 1 to the score counter above (set to 0)
+        print("Congratulations you got the correct answer\nYour score is now " + str(count))
+        break               # loop is broken if answer to question 1 equals 1 (the correct answer) 
+        
+while True:
+    question2 = int(input("What is the capital of Germany ? \n1.Berlin\n2.Brighton\3.Birmingham"))
+    if question2 == 1:
+        count +=1
+        print("Congratulations you got the correct answer\nYour score is now " + str(count))
+        break            # loop is broken if answer to question 1 equals 1 (the correct answer) 
+
