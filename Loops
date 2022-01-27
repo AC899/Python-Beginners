@@ -194,3 +194,21 @@ for i in single_digits:
 
 print(squares)
 print(cubes)
+
+
+
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 100, 110, 21, 33, 32, 2, 4]
+# using modulus operator to give us all ODD numbers i.e. so when the number is divided by 2 we have 1 left
+odd = []
+for number in my_list:
+    if number % 2 == 1:
+        odd.append(number)
+print(odd)
+
+# using modulus operator to give us all EVEN numbers i.e. so when the number is divided by 2 we have 0 left
+even = []
+for i in my_list:
+    if i % 2 == 0:
+        even.append(i)
+print(even)
