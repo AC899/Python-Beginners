@@ -21,11 +21,20 @@ print(donkey_age.age)
 
 #simple class creation
 
-class DriveBot:
-    def __init__(self):                # This is a constructor we are adding as a METHOD to our class. This is a function usually but a constructor here as it is used within a class
-        self.motor_speed = 0
-        self.direction = 0
-        self.sensor_range = 0
+class DriveBot:         # This is a constructor we are adding as a METHOD to our class. This is a function usually but a constructor here as it is used within a class
+                                                      # these are class variables
+    all_disabled = False            # variables placed within the class so if these values are changed they change everything within the class
+    latittude = -999999
+    longitude = -999999
+    robot_count = 0                   # We are starting our robout count at 0
+
+                                    # these are three optional parameters that represent the DEFAULT VALUES i.e. if you called print((variablename).motor_speed) it will default to a value of 0
+    def __init__(self, motor_speed=0, direction=180, sensor_range=10):
+        self.motor_speed = motor_speed
+        self.direction = direction
+        self.sensor_range = sensor_range
+        DriveBot.robot_count +=1                  # we are adding 1 to the above robot count of 0 as defined these are three optional pd in the class variable
+        self.id = DriveBot.robot_count           # 
 
 
     def control_bot(self, new_speed, new_direction):
@@ -45,3 +54,9 @@ robot_1.adjust_sensor(1)                            #call variable for drivebot 
 #printing the values in the above classes / methods: state print. call the variable for drivebotclass and use a full stop and the new variable name we want to print.
 print(robot_1.new_speed)
 print(robot_1.new_direction)                   #
+
+robot_2 = DriveBot()  # adding a new robot to the robot class. This will print the DEFAULT values in the drivebot constructor parameters.
+# If you add the following values into the above variable: i.e. (35,75,25) it overwrites the default values and will add them in.
+print(robot_2.motor_speed)
+print(robot_2.direction)
+print(robot_2.sensor_range)
