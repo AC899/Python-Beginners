@@ -23,3 +23,25 @@ print(listasTuple)
 
 
 
+5) How to convert a list into a set?
+# method 1 
+sample_list = [1,2,3,'seeker',3,7.5]
+set = set(sample_list)
+# method 2
+sample_list = [1,2,3,'seeker',3,7.5]
+sample_set = set()                    # defining an empty set          
+for i in sample_list:                 # loop through sample list with temp variable 
+    sample_set.add(i)                 # emptysetname.add(tempvariable)
+# method 3 
+sample_list = [1,2,3,'seeker',3,7.5]
+t = {x for x in sample_list}              # this is set comprehension - returning a set based on iterating variables 
+print(t)
+# method 4
+a = [1,2,3,'seeker',3,7.5]
+x = list(dict.fromkeys(a))                   #this does not print in an orderly manner 
+converted_set = set(x)
+print(converted_set)
+
+
+
+
