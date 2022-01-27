@@ -7,8 +7,8 @@ Pycharm has the debugger built in
 
 
 
+3) How to convert a list into a string?
 
-#  converting list of intergers into a string 
 my_list = [1, 2, 3, 4, 5, 6, 7, 100, 110, 21, 33, 32, 2, 4]
 listAsString = ''.join(map(str,my_list))                             <”.join()> method joins all the elements into one and returns it as a string
 print(listAsString)
