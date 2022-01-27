@@ -181,3 +181,20 @@ print(removing_letters("9s8afasf9safas2235"))
 
 
 
+
+# badly shit dice game 
+numberrandom1 = random.randint(1, 6)
+numberrandom2 = random.randint(1, 6)
+combined = numberrandom1 + numberrandom2
+dice1= print(numberrandom1)
+dice2 = print(numberrandom2)
+count = 0
+
+if combined ==12:
+    count +=1
+    print("You rolled two sixes - you win.\n It took you " + str(count) + " throws of the dice.")
+else:
+    False
+
+
+
