@@ -212,3 +212,18 @@ for i in my_list:
     if i % 2 == 0:
         even.append(i)
 print(even)
+
+
+
+
+
+#   adding all the elements of a list 
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 100, 110, 21, 33, 32, 2, 4]
+count = 0
+
+for i in my_list:           #lopping through my_list
+    count += i              #adding all the numbers in a list together 
+
+print(count)
+
