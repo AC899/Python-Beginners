@@ -2,7 +2,7 @@
 
 # class variables 
 
-class Monkey():   
+class Monkey():                   #this is the object / parent class 
   weight = "Monkey"               #indented variable assigned string value 
 
 body = Monkey()                   #assign a variable to the Class outisde of the indentation
@@ -21,18 +21,27 @@ print(donkey_age.age)
 
 #simple class creation
 
-class Drivebot():
-     def __init__(self):                            #This is a basic constructor within a class
-        self.motor_speed = 0                          #instance variables set to default to 0
-        self.sensor_range = 0
+class DriveBot:
+    def __init__(self):                # This is a constructor we are adding as a METHOD to our class. This is a function usually but a constructor here as it is used within a class
+        self.motor_speed = 0
         self.direction = 0
+        self.sensor_range = 0
 
-robot_1 = Drivebot()                               #creating an object from the class - saving the class to a variable
-print(robot_1.sensor_range)
 
-def control_bot(self,new_speed,new_direction):        #we are adding a method to the  class called controlbot to the drivebot class
-    self.motor_speed = new_speed                    #speed variable is becoming new speed  
-    self.direction = new_direction                    #direction variable is becoming new direction 
-    
-def adjust_sensor(self,new_sensor_range):            #we are adding a method to the class called adjust sensor 
-    self.sensor_range = new_sensor_range            #wsensor range variable is being replaced by new sensor range 
+    def control_bot(self, new_speed, new_direction):
+        self.new_speed = new_speed
+        self.new_direction = new_direction
+
+    def adjust_sensor(self,new_sensor_range):
+        self.new_sensor_range = new_sensor_range
+
+ #  assigning a variable to the whole class as defined above
+robot_1 = DriveBot()
+
+#  assigning values to the methods within the class
+robot_1.control_bot(10,80)                           #call variable drivebot class - referenceing control bot method within the class and insert the desired values
+robot_1.adjust_sensor(1)                            #call variable for drivebot class - referencing method within the class. chaning the value of new sensor range within the sensor range class.
+
+#printing the values in the above classes / methods: state print. call the variable for drivebotclass and use a full stop and the new variable name we want to print.
+print(robot_1.new_speed)
+print(robot_1.new_direction)                   #
