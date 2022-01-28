@@ -269,3 +269,21 @@ def splitting(question1):
     print("The numbers in your string are: " + only_numbers)
 
 print(splitting("123absafsasfaf22"))
+
+
+
+
+
+
+#simple hangman game 
+initial_letter = input("Enter your letter: ")
+
+#spfunction to take away points / length of initial letter needs to be the total amount of points and we do a count =-1
+#while loop to break at the end of length of the letter for guesses / if conditionals for characters in initial letter
+
+
+countdown = len(initial_letter)
+i = 0
+while i <= countdown:
+    i +=1
+    print(i)
