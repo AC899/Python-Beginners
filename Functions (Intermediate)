@@ -155,3 +155,12 @@ def arbitrary_keyword_args(**kwargs):
 arbitrary_keyword_args(name = 1, name2 = 2, anything_goes = 101)
 
 
+
+
+
+# use args for any number of positional arguments and kwargs to print dictionary / value pairs 
+def accept(*args, **ultimate):
+    print(ultimate,args)
+
+accept(1,2, num=10, mo = 5, )
+
