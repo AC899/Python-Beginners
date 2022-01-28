@@ -194,3 +194,14 @@ def print_data(**data):                          #allows us to take values / key
 print_data(a='arg1', b=True, c=100)             #
 
 
+
+
+
+#using iteration with kwargs
+def print_data(postional_arg, **data):          #adding a positional argument that doesn't have the key / value structure to our function
+    print(postional_arg)                     #  without this print statement it won't print the positional below 
+    for loop in data.values():               #
+        print(loop)
+
+print_data("position 1", a='arg1', b=True, c=100)             #
+
