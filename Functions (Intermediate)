@@ -52,3 +52,16 @@ def print_order(*order_items):        # * allows us to send multiple arguments t
 
 #print_order(1+2+3,3, "Jmes")        #the unpacking operator returns a tuple (not a list) - unchangeable
 print_order("Orange Juice", "Apple Juice", "Scrambled Eggs", "Pancakes")
+
+
+
+
+# args = variable number of arguments
+# building a print statement for everything entered into the function
+def shout_strings(*args):        # use the unpacking operator in the function argument call
+    for i in args:               # looping through args
+        print(i.lower())           # this is to print in lower case i.e. .lower(). To print normally we take away the paranthesis
+shout_strings('Working on', 'learning', 'argument unpacking!')
+
+
+
