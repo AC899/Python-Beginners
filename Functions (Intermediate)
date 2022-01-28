@@ -42,3 +42,13 @@ assign_table(4,"Karla")          #positional argument 2 we can set VIP status to
 assign_table(name="Martha", table_number=3, vip_status=True)    #keyword argument
 
 print(tables)
+
+
+
+
+#Unpacking operator in a function argument = *
+def print_order(*order_items):        # * allows us to send multiple arguments to the function
+    print(order_items)
+
+#print_order(1+2+3,3, "Jmes")        #the unpacking operator returns a tuple (not a list) - unchangeable
+print_order("Orange Juice", "Apple Juice", "Scrambled Eggs", "Pancakes")
