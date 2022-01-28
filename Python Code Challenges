@@ -256,3 +256,16 @@ while True:
         print("Congratulations you got the correct answer\nYour score is now " + str(count))
         break            # loop is broken if answer to question 1 equals 1 (the correct answer) 
 
+
+
+
+
+#splitting numbers from characters. 
+
+def splitting(question1):
+    only_numbers = ''.join([loop for loop in question1 if not loop.isalpha()])
+    only_letters = ''.join([i for i in question1 if not i.isdigit()])    #LOOP to remove all digits from the string
+    print("The letters in your string are: " + only_letters)
+    print("The numbers in your string are: " + only_numbers)
+
+print(splitting("123absafsasfaf22"))
