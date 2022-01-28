@@ -164,3 +164,23 @@ def accept(*args, **ultimate):
 
 accept(1,2, num=10, mo = 5, )
 
+
+
+# multiply and subtract using ARGS 
+def multiply(*nums):
+    result = 1
+    for num in nums:
+        result = num * result
+        print(result)
+
+multiply(2,11,10)
+
+def subtract(*nums):
+    total = 1
+    for i in nums:
+        total = i - total
+        print(total)
+
+subtract(2,11,5,5)
+
+
