@@ -46,6 +46,50 @@ print(tables)
 
 
 
+
+# combining the * unpacking operator to cut sentences off at a particular index
+tables = {
+  1: {
+    'name': 'Jiho',
+    'vip_status': False,
+    'order': 'Orange Juice, Apple Juice'
+  },
+  2: {},
+  3: {},
+  4: {},
+  5: {},
+  6: {},
+  7: {},
+}
+print(tables)
+
+def assign_table(table_number, name, vip_status=False):
+  tables[table_number]['name'] = name
+  tables[table_number]['vip_status'] = vip_status
+  tables[table_number]['order'] = ''     #nested keys
+
+# Write your code below:
+
+def assign_and_print_order(table_number, *order_items):
+  tables[table_number]['order'] = order_items
+  for i in order_items:
+    print(i)
+
+
+assign_table(2, "Arwa", True)
+
+assign_and_print_order(2, 'Steak', 'Seabass', 'Wine Bottle')
+print(tables)
+
+
+
+
+
+
+
+
+
+
 #Unpacking operator in a function argument = *
 def print_order(*order_items):        # * allows us to send multiple arguments to the function
     print(order_items)
@@ -56,12 +100,24 @@ print_order("Orange Juice", "Apple Juice", "Scrambled Eggs", "Pancakes")
 
 
 
-# args = variable number of arguments
+# args = NON KEYWORD arguments - these are strings in the example below 
 # building a print statement for everything entered into the function
 def shout_strings(*args):        # use the unpacking operator in the function argument call
     for i in args:               # looping through args
         print(i.lower())           # this is to print in lower case i.e. .lower(). To print normally we take away the paranthesis
 shout_strings('Working on', 'learning', 'argument unpacking!')
+
+
+
+
+
+# combining the * unpacking operator to cut sentences off at a particular index
+def truncate_sentences(length, *sentences):       # accepting two parameters: number for length and multiple args for sentences
+    for sentence in sentences:                      #looping through the args
+        print(sentence[:length])                   #printing looped tuple created by args - slicing with the length argument
+
+truncate_sentences(4, "ASasss", "ASas")
+
 
 
 
