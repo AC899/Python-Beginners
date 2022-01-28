@@ -1,1 +1,17 @@
+# Positional arguments: when you call arguments by their position in a function
 
+def house(blue_door,red_door):
+    print(blue_door,red_door)
+house("blue door","red door")
+
+
+# Keyword arguments =
+def house(blue_door,red_door):            # blue door / red door order in the function
+    print(red_door, blue_door)
+house(red_door = "red", blue_door = "blue")      # the arguments are in reverse order to the above funciton call
+
+
+# Default arguments
+def house(blue_door = "blue", red_door = "red"):     # assigning default values to the parameters
+    print(blue_door, red_door)
+house()                                           # can call the function without any arguments
