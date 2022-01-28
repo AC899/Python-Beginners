@@ -275,15 +275,29 @@ print(splitting("123absafsasfaf22"))
 
 
 
-#simple hangman game 
 initial_letter = input("Enter your letter: ")
-
 #spfunction to take away points / length of initial letter needs to be the total amount of points and we do a count =-1
 #while loop to break at the end of length of the letter for guesses / if conditionals for characters in initial letter
 
 
+# countdown for number of attempts left to guess the correct letter
 countdown = len(initial_letter)
+
+
 i = 0
 while i <= countdown:
     i +=1
     print(i)
+
+# function to loop through each character of the entered word and make a list
+chars = []
+for i in initial_letter:
+    chars.append(i)
+
+# if guessed guess input is equal to initial letter then count +=1 / while loop to end all attempts at
+
+
+
+#splitting all the letters and numbers from the input
+only_letters = ''.join([i for i in initial_letter if not i.isdigit()])    #LOOP to remove all letters from the string
+only_numbers = ''.join([loop for loop in initial_letter if not loop.isalpha()]) #LOOP to remove all digits from the string
