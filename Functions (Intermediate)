@@ -121,3 +121,37 @@ truncate_sentences(4, "ASasss", "ASas")
 
 
 
+# **kwargs - allows us to define functions within unlimited keyword arguments
+#we use kwargs for functions when we dont understand fully whats going on or when we have a function where there is a potential to add a bunch of stuff at a alter point
+
+def my_func(*args, **kwargs):                    #**kwargs allow us to pass through the values of keys / *args are arguments that are not keyword arguments
+    print("Hello world", args, kwargs)
+
+my_func("abc", "abc", key =123)
+
+
+
+#Example of how KWAGS works in django - the below gives us an error
+
+def my_django_view(request):
+    print(request)
+my_django_view("request", id = 'some_id')     #we will get an error saying unexpected keyword argument ID
+
+#KWARGS in the function fixes the error
+
+def my_django_view(request, **kwargs): #added KWARGS as a function agrument 
+    print(kwargs)                         #kwargs is printed without the ** 
+
+my_django_view("request", id='some_id')     #KWARGS above allowed us to accept the ID parameter as before it was only looking for a request 
+
+
+# **kwargs - allows us to define functions within unlimited keyword arguments.
+# Note: you don't have to call it kwargs
+
+def arbitrary_keyword_args(**kwargs):
+    print(kwargs)
+    print(kwargs.get('anything_goes'))            #we are retrieivng the value of the key anything_goes and printing it. We have **kwargs above so this allows us to insert the dictionary value below and replicate in a print statement with .get.
+
+arbitrary_keyword_args(name = 1, name2 = 2, anything_goes = 101)
+
+
