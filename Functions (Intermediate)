@@ -184,3 +184,13 @@ def subtract(*nums):
 subtract(2,11,5,5)
 
 
+
+
+#using iteration with kwargs
+def print_data(**data):                          #allows us to take values / key data that can be specified later on
+    for loop in data.values():               #the.values(): part can be switched to .keys() to change what to print 
+        print(loop)
+
+print_data(a='arg1', b=True, c=100)             #
+
+
