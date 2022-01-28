@@ -32,3 +32,13 @@ def add_ten(my_dictionary):
   return my_dictionary
 
 print(add_ten({1:5, 2:2, 3:3}))
+
+
+
+
+# grabbing all the keys from a dictionary 
+
+my_dict = {"apple": 2.50, "orange": 4.99, "banana": 0.59}
+
+keys = (my_dict.keys())        #(dictionaryname.keys())
+print(keys)
