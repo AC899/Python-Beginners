@@ -368,3 +368,8 @@ new = lambda a,b,c:a if a >b else c    #PRINT a if a greater than b else print c
 print(new(100,10,10))                  
 print(new(100,150,80))
 
+
+names = ["alan", "mark", "augustine", "danny"]
+names.sort(key= lambda x:len(x))    #sorting the list by the length of the string i.e. key = lambda input: len(input)
+print(names)
+
