@@ -205,3 +205,17 @@ def print_data(postional_arg, **data):          #adding a positional argument th
 
 print_data("position 1", a='arg1', b=True, c=100)             #
 
+
+
+
+
+
+#Lambda functions: functions in one line that use the word lambda
+
+add_three = lambda my_input: my_input + 3
+#add_three is not a variable here as we have lambda (telling us it's a one line function)
+#function name < lambda > parameter: parameter w/method
+print(add_three(3))
+
+add_five = lambda myinput: myinput + 5
+print(add_five(3))
