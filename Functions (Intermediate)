@@ -85,11 +85,6 @@ print(tables)
 
 
 
-
-
-
-
-
 #Unpacking operator in a function argument = *
 def print_order(*order_items):        # * allows us to send multiple arguments to the function
     print(order_items)
