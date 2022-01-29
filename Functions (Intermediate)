@@ -341,3 +341,14 @@ def function1(x):
     return function2(x) *2
 
 print(function1(2))
+
+
+
+#lambda functions are single line functions without a name
+#lCan take any number of arguments but only one expression 
+
+new = lambda n:n * 4 - 2
+print(new(2))
+
+new1 = lambda n:n-3*100
+print(new1(20))
