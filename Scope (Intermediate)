@@ -1,0 +1,17 @@
+#Scope: in the example below color is locally scoped to the  function of favourite colour. So we can call the function with no argument and receive a result.
+
+def favorite_color():
+    color = "green"
+    print(color)
+favorite_color()
+
+#Scope example #2
+
+def painting(paint_colors, picture):
+  painting_statement = "To paint the " + picture + " we need the following colors: "
+  print(painting_statement)                                     #this is now scoped locally 
+  for color in paint_colors:
+      print(color)
+
+painting(['Orange', 'White', 'Green'], 'Indian Flag')
+
