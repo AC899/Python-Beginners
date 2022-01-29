@@ -358,3 +358,13 @@ multiplication = lambda x,y,d: x + y - d     #specify them as follows
 
 
 print(multiplication(2,4,5))
+
+
+
+#lambda functions are single line functions without a name
+
+new = lambda a,b,c:a if a >b else c    #PRINT a if a greater than b else print c
+
+print(new(100,10,10))                  
+print(new(100,150,80))
+
