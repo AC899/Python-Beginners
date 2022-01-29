@@ -303,3 +303,23 @@ for i in range(len(bills)):                     #loop iterating through the inde
 print(new_bills)
 
 
+
+
+#map(function, parameter) - converts function input into a list
+
+def double(x):                 # defining a function which doubles input by 2 
+    return x * 2
+int_list = [3, 6, 9]             # defining interget list to use as an input 
+doubled = map(double, int_list)   # new variable = map(function we want to use, parameter we want to use i.e. the intlist) 
+print(list(doubled))              # we have to use print(list(doubled)) to show the results here as otherwise it just tells us that we have a map object 
+
+def triple(x):
+    return x * 3
+new = map(triple, int_list)
+print(list(new))
+
+def quadruple(x):
+    return x * 4
+
+new2 = map(quadruple, int_list)
+print(list(new2))          
