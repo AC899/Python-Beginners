@@ -322,4 +322,8 @@ def quadruple(x):
     return x * 4
 
 new2 = map(quadruple, int_list)
-print(list(new2))          
+print(list(new2))   
+
+
+doubled = map(lambda input: input*2, int_list)      # new variable = map(lambda input: input*2, int_list
+print(list(doubled))
