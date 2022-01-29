@@ -219,3 +219,12 @@ print(add_three(3))
 
 add_five = lambda myinput: myinput + 5
 print(add_five(3))
+
+
+#typical function to a lambda one liner
+def add_bang(sentence):
+  print(sentence + '!')
+
+add_bang = lambda string: print(string + "!")
+add_bang("string")
+
