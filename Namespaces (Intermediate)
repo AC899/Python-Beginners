@@ -1,0 +1,44 @@
+# NAMESPACE in python i.e. color = "cyan". The name of the string is colour. The namespace is searched for.
+
+# built in NAMESPACE that always runs with the python interpreter. This gives us access to all the built in namespace comamnds
+print(dir(__builtins__))
+
+# Global namespace - this will give us a running track of all the namespace variables that we have in our project
+# test its efficacy by adding / taking away variables and you will see them printed / removed accordiongly from the console
+print(globals())
+
+
+#Local namespace: within in the function i.e. num1, num2 only exist with the function and remain / end where it terminates. 
+
+global_variable = 'global'       
+
+def add(num1, num2):
+    nested_value = 'Inside Function'
+    print(num1 + num2)
+    print(locals())
+
+add(5, 10)
+
+
+# Enclsoing namespaces - intended for nested functions 
+
+global_variable = 'global'
+
+
+def outer_function():
+    outer_value = "outer"
+
+    def inner_function():
+        inner_value = "inner"
+
+        def inner_nested_function():
+            nested_value = 'nested'
+
+        inner_nested_function()
+        # Add locals() below
+        print(locals())
+
+    inner_function()
+
+
+outer_function()
