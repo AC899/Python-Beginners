@@ -228,3 +228,78 @@ def add_bang(sentence):
 add_bang = lambda string: print(string + "!")
 add_bang("string")
 
+
+
+Hhigher order functions > accept a function as an arugment and return a value that is linked to another function
+
+def total_bill(func, value):  #func means we are taking a function as a parameter for this higher order function 
+  total = func(value)    #func means
+  return total
+
+
+def add_tax(total):
+    tax = total * 0.06
+    new_total = total + tax
+    return new_total
+
+
+total_bill(add_tax, 100)     #the higher order fnction takes in func, value so: higher order function > function we are calling as a parameter, parameter for input (in this case a number
+
+
+
+
+#higher function calling on lower functions for upper / lowercase letters
+
+def higher(func,string):          #the higher function takes in a function and a string as a parameter
+    string = func(string)         #tells it we are running the function(s) below over the string 
+    return string                
+
+def lower(string):             #the higher function
+    return string.lower()
+
+def upper(string):             #the highercase function 
+    return string.upper()
+
+print(higher(lower, "hello"))      #higher function name >function we are calling on > additonal parameters in the higher function 
+
+
+
+
+#calling functions as arguments 
+
+
+def total_bill(func, value):
+  total = func(value)
+  return total
+
+
+def add_tax(total):
+    tax = total * 0.06
+    new_total = total + tax
+    return new_total
+
+
+def add_tip(total):
+    tip = total * .2
+    new_total = total + tip
+    return new_total
+
+
+def total_bill(func, value):
+    total = func(value)
+    return ("The total amount owed is $" + "{:.2f}".format(total) + ". Thank you! :)")
+
+total_bill(add_tip, 100)
+
+
+bills = [115, 120, 42]
+new_bills = []
+
+for i in range(len(bills)):                     #loop iterating through the indexed bills - counts from 0 to 2
+    total = add_tax(bills[i])                   #total > ran through the add tax function > bills i
+    print(total)
+    new_bills.append("Total amount owed is £" + "{:.2f}".format(total) + ". Thank you! :)")
+
+print(new_bills)
+
+
