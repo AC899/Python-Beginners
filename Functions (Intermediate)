@@ -352,3 +352,14 @@ print(new(2))
 
 new1 = lambda n:n-3*100
 print(new1(20))
+
+
+
+#MULTIPLE NUMBER OF ARGUMENTS FOR LAMBDA
+new = lambda n:n * 4 - 2
+print(new(2))
+
+multiplication = lambda x,y,d: x + y - d     #specify them as follows 
+
+
+print(multiplication(2,4,5))
