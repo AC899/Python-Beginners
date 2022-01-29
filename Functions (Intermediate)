@@ -327,3 +327,8 @@ print(list(new2))
 
 doubled = map(lambda input: input*2, int_list)      # new variable = map(lambda input: input*2, int_list
 print(list(doubled))
+
+
+#saves us typing out a function as now we can run any number as x for an equation of x5
+function = lambda x: x*5                                                      #lambda is much easier than using def (as this takes up loads of lines of code. 
+print(function(10))
