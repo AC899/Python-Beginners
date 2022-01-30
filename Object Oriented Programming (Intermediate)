@@ -6,8 +6,26 @@ This led ato a programming paradigm: a specific way of writing programs with dec
 Object orienttion is the most popular paradigm used today. Imagine a simple to do list which has a desription, status and a list of tasks ....... all programs have data and behaviour and in the case of our to do list
 that's the name of tasks and whether they are complet. The  to do list is what apps do with the behaviour. The data and behaviour makes up the core of what the behaviour will do.
 
+The data and the behaviour is grouped toegether in objects (an entity in our code which contains all teh data and attributes in a easy to use cointainer). We access the data through the object. 
 
-Scenario 1: a txt file has all of the information about the employees at a company. We need to write a program that reasd the information from the external file and stores it in memory by first, last and salary of each employee. For the salary. We want one list that holds ALL the data.
+Four pillars of object orientation: a) encapsulation: an object's ability to bundle together related data and behaviour to limited scope. 
+
+b) abstraction: the ability to hide complex logic from the user making the code easier to use in other places i.e. when you send an email and click accept (you dont need to now anything about email servers etc.) the info is abstracted. By placing all the complex logic in classes (just like with emails) we are able to extract it awy form people using the code
+In reality we may need complex code, logic for updating the value to make sure the current user has permission to toggle it but if we ar e using a task object all we need to do is call the toggle complete method and we get that effect. 
+
+c) 
+
+d) 
+
+Procedural programming: the order of code matters. Data is mutated as teh program carries out the behaviour. 
+
+Functional programming: the data and behaviour are separate. We never mutuate data directly but instead return new copies of updated data. 
+
+
+
+
+
+Scenario 1: a txt file all of the information about the employees at a company. We need to write a program that reasd the information from the external file and stores it in memory by first, last and salary of each employee. For the salary. We want one list that holds ALL the data.
 
 a) we would need functions to add employee data, last / first name and salary: our function would callable(- extract first name, extract last name, compute salary)
 
