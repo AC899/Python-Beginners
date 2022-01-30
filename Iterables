@@ -1,0 +1,10 @@
+# Iterables = object that is capable of being looped 
+
+dog_foods = {
+    "Great Dane Foods": 4,
+    "Min Pin Pup Foods": 10,
+    "Pawsome Pups Foods": 8
+}
+
+for brands in dog_foods:     #standard loop through the dictionary / list 
+    print(brands + "has " + str(dog_foods[brands]) + " bags")     # if we print brands alone we just get the key values to the dictionary. when we add str(mainvariable[tempvariable]) we print the keys which are the values 
