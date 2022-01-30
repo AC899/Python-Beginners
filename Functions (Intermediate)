@@ -376,3 +376,30 @@ names = ["alan", "mark", "augustine", "danny"]
 names.sort(key= lambda x:len(x))    #sorting the list by the length of the string i.e. key = lambda input: len(input)
 print(names)
 
+
+
+
+
+#only printing grades in 4 point average: SUPERIOR WAY. 
+# using IF function with lambda 
+
+grade_list = [3.5, 3.7, 2.6, 95, 87]
+grades_100scale = map(lambda grade: grade *25 if grade <=4 else grade, grade_list)
+print(list(grades_100scale))      #IF function with lambda: map(lambda input: input *25 if input <=4 else grade, list / iterable we are going through)
+
+
+#only printing grades in 4 point average - my way
+
+grade_list = [3.5, 3.7, 2.6, 95, 87]
+updated_grade_list = []                 #empty list to append all the grades from grade_list below 4 into 
+
+for i in grade_list:                   #looping through grade_list and if the elements are less than 4 we append them to the empty upgrade list 
+    if i < 4:
+        updated_grade_list.append(i)
+
+print(updated_grade_list)              #printing the empty updated grade list just to make sure that we can see we only have amounts less than 4 from grade list 
+
+grades_100scale = map(lambda input: input * 25, updated_grade_list)            #using lambda to save us defining a function to multiply all the elements from the updated list by 25 
+print(list(grades_100scale))
+
+
