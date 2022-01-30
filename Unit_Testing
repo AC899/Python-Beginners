@@ -1,0 +1,20 @@
+#Unit testing - when we want to return errors if something is not present
+
+instrument_catalog = {
+  'Marimba': 1999,
+  'Kora': 499,             #Piano is missing from these variables
+  'Flute': 899
+}
+
+def print_instrument_price(instrument):
+    # Checkpoint 2
+    if instrument in instrument_catalog:                   #if the term called as instrument in the function is in the above catalogue then print the following statement          
+      print('The price of a ' + instrument + ' is ' + str(instrument_catalog[instrument]))
+    # Checkpoint 3
+    else:
+      raise KeyError(instrument + ' is not found in instrument catalog!')       #if the word called with the function is not in instrument catalogue then return the KeyError as provided 
+
+
+print_instrument_price('Marimba')
+print_instrument_price('Flute')
+print_instrument_price('Piano')
