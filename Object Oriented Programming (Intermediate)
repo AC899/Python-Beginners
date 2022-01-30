@@ -1,7 +1,19 @@
+
+In the early days of computing most programmes wer estraighfroward but as computers became more powerful - languages and best practices evolved to suit developers. 
+
+This led ato a programming paradigm: a specific way of writing programs with decreased bugs and increased optimisation. 
+
+Object orienttion is the most popular paradigm used today. Imagine a simple to do list which has a desription, status and a list of tasks ....... all programs have data and behaviour and in the case of our to do list
+that's the name of tasks and whether they are complet. The  to do list is what apps do with the behaviour. The data and behaviour makes up the core of what the behaviour will do.
+
+
 Scenario 1: a txt file has all of the information about the employees at a company. We need to write a program that reasd the information from the external file and stores it in memory by first, last and salary of each employee. For the salary. We want one list that holds ALL the data.
 
 a) we would need functions to add employee data, last / first name and salary: our function would callable(- extract first name, extract last name, compute salary)
 
 We need to think about how to approach big problems and make them smaller i.e the add employee function is the big one and the smaller functions to take the first name, last name and salary are smaller and necessary functions to solve our problems.
+
+
+
 
 
