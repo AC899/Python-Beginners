@@ -403,3 +403,20 @@ grades_100scale = map(lambda input: input * 25, updated_grade_list)            #
 print(list(grades_100scale))
 
 
+
+
+#Filter(): takes a function and an iterable as arguments
+
+names = ["margarita", "Linda", "Masako", "Maki", "Angela"]
+print(names[0])
+second_letter = filter(lambda name: name[0] =="M" or name[0] == "m", names)   #if the condition evalues to true them the item is added to a filter object i.e. so if there is an m at the start of any names in the above list they will be added automatically 
+print(list(second_letter))
+
+
+#Filter(): evaluates statements to true if present in the iterable and reproduces them in the variable 
+
+names = ["margarita", "Linda", "Masako", "Maki", "Angela"]
+
+second_letter = filter(lambda name: name[0] =="L" or name[0] == "A",names)#if there is an A or L as the beginning word in names list it will evaluate to true and save those words as the new variable
+print(list(second_letter))
+
