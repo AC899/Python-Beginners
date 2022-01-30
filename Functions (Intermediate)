@@ -420,3 +420,17 @@ names = ["margarita", "Linda", "Masako", "Maki", "Angela"]
 second_letter = filter(lambda name: name[0] =="L" or name[0] == "A",names)#if there is an A or L as the beginning word in names list it will evaluate to true and save those words as the new variable
 print(list(second_letter))
 
+
+#Filter(): evaluates statements to true if present in the iterable and filters them out from the updated variable 
+
+books = [["Burgess", 1985],
+ ["Orwell", "Nineteen Eighty-four"],
+  ["Murakami", "1Q85"],
+   ["Orwell", 1984],
+    ["Burgess", "Nineteen Eighty-five"],
+     ["Murakami", 1985]]
+
+
+string_titles =  filter(lambda value: type(value[1]) == str, books)    #filtering a value from the above list i.e. we wanted to remove all the interger entries (they all begin with 1)
+print(list(string_titles))
+
