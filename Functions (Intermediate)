@@ -448,3 +448,13 @@ increased_int_list = reduce(lambda x,y: x-y,int_list)        #reduce lambda x,y 
 print(increased_int_list)
 
 
+
+
+#Reduce; returns a single value - i.e. sum up numbers, join words together etc. 
+
+from functools import reduce
+
+letters = ['r', 'e', 'd', 'u', 'c', 'e']
+
+letters = reduce(lambda i, j: i + j, letters)        #lambda i,j (see these as first and second letter): adding i + j together from letters 
+print(letters)
