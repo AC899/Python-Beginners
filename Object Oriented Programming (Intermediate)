@@ -45,3 +45,30 @@ mark=
 
 fluffy.eat()
 zoomie.eat()                     # eat is the constructor defined to print the result in the parent class 
+
+
+# Parent classes part 2 
+
+class Donkey:
+    def donkeysound(self):            
+        print("Huuuuharghhhh")       #Parent class as defined 
+
+class Donkey1(Donkey):                 #Child class (calls parent as parameter) 
+    def greeting_donkey1(self):
+        print("I am the donkey")
+
+class Donkey2(Donkey):               #Child class (calls parent as parameter)
+    def greeting_donkey2(self):
+        print("I am donkey 2")
+
+Django = Donkey1()                       #
+Burtross = Donkey2()
+Django.donkeysound()
+Burtross.donkeysound()     #calling the parent through the child i.e. donkeysound is in the constructor for Donkey
+
+
+new = Donkey1()
+new.greeting_donkey1()    #calling the child on its own 
+
+
+
