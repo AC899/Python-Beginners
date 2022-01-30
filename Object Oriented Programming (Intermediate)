@@ -13,9 +13,10 @@ Four pillars of object orientation: a) encapsulation: an object's ability to bun
 b) abstraction: the ability to hide complex logic from the user making the code easier to use in other places i.e. when you send an email and click accept (you dont need to now anything about email servers etc.) the info is abstracted. By placing all the complex logic in classes (just like with emails) we are able to extract it awy form people using the code
 In reality we may need complex code, logic for updating the value to make sure the current user has permission to toggle it but if we ar e using a task object all we need to do is call the toggle complete method and we get that effect. 
 
-c) 
+c) inheritance: allows a class to inherit all of the functionality of another class. We don't have to reimplement or rewrite any logic. It is automatically avilable to any of the  code interacting with a task i.e. a deadline task object and 
+all be iherited by another class. 
 
-d) 
+d) polymorphism: having multiple forms. Allows to use different task objects in our programmes interchangably. 
 
 Procedural programming: the order of code matters. Data is mutated as teh program carries out the behaviour. 
 
