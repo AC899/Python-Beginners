@@ -242,22 +242,19 @@ print("Player 2 score:", player2_score)
 
 count = 0
 
-while True:               # looping the question below continuously 
-    question1 = int(input("What is the capital of UK ? \n1.London\n2.Brighton\3.Birmingham"))   
+while True:  # looping the question below continuously
+    question1 = int(input("What is the capital of UK ? \n1.London\n2.Brighton\n3.Birmingham"))
     if question1 == 1:
-        count +=1          # add 1 to the score counter above (set to 0)
+        count += 1  # add 1 to the score counter above (set to 0)
         print("Congratulations you got the correct answer\nYour score is now " + str(count))
-        break               # loop is broken if answer to question 1 equals 1 (the correct answer) 
-        
+        break  # loop is broken if answer to question 1 equals 1 (the correct answer)
+
 while True:
-    question2 = int(input("What is the capital of Germany ? \n1.Berlin\n2.Brighton\3.Birmingham"))
+    question2 = int(input("What is the capital of Germany ? \n1.Berlin\n2.Brighton\n3.Birmingham"))
     if question2 == 1:
-        count +=1
+        count += 1
         print("Congratulations you got the correct answer\nYour score is now " + str(count))
-        break            # loop is broken if answer to question 1 equals 1 (the correct answer) 
-
-
-
+        break  # loop is broken if answer to question 1 equals 1 (the correct answer)
 
 
 #splitting numbers from characters. 
