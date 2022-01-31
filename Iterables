@@ -22,3 +22,30 @@ print(sku_iterator_object_one)
 
 sku_iterator_object_two = iter(sku_list)
 print(sku_iterator_object_two)
+
+
+
+
+#itertools.chain(add iterable,add iterable) - this allows us to add looped elements from different variables together i.e.
+import itertools
+
+odd = [5, 7, 9]
+even = {6, 8, 10}
+
+chained = itertools.chain(odd,even)       # variable list chained together i.e. odd / even are linked in one iterable called chained 
+for chains in chained:        #new look for chained variables 
+    print(chains)
+
+
+
+
+#this can work with LOTS of different variables 
+
+great_dane_foods = [2439176, 3174521, 3560031]
+min_pin_pup_foods = [6821904, 3302083]
+pawsome_pup_foods = [9664865]
+
+all_skus_iterator = itertools.chain(great_dane_foods, min_pin_pup_foods, pawsome_pup_foods)
+
+for all in all_skus_iterator:
+  print(all)
