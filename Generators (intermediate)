@@ -1,0 +1,12 @@
+# Yield generator: different from return statement.
+
+def class_standing_generator():
+    yield "Freshman"
+    yield "Sophomore"
+    yield "Junior"
+    yield "Senior"
+
+class_standings = class_standing_generator()
+
+for loop in class_standings:
+    print(loop)               #prints all of the values in class_standing_generator()
