@@ -49,3 +49,18 @@ all_skus_iterator = itertools.chain(great_dane_foods, min_pin_pup_foods, pawsome
 
 for all in all_skus_iterator:
   print(all)
+
+
+
+#produce an iterator of tuples that contain combinations of all elements in the input.
+import itertools
+
+even = [2, 4, 6]
+
+listed = list(itertools.combinations(even,2)) #this would convert the variable in a list showing all combinations of 2 that are even
+print(listed)
+set = set(itertools.combinations(even,2))         #converts variable into a set 
+print(set)
+
+
+
