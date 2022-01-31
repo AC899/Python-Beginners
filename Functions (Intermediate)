@@ -458,3 +458,33 @@ letters = ['r', 'e', 'd', 'u', 'c', 'e']
 
 letters = reduce(lambda i, j: i + j, letters)        #lambda i,j (see these as first and second letter): adding i + j together from letters 
 print(letters)
+
+
+
+
+
+# using operators in function calls
+
+my_num_list = [3, 6, 9]      #  List of numbers
+
+def sum(num1, num2, num3):      # function to add the lists of numbers together
+  print(num1 + num2 + num3)
+
+
+sum(*my_num_list)  #saves the hassle of writing loops
+                   # function to a our function and using the (*) before the parameter we are running it through the function
+                   
+                   
+                   
+                   
+                   
+def calculate_price_per_person(total, tip, split):      # usio calculate the price per person
+  total_tip = total * (tip/100)
+  split_price = (total + total_tip) / split
+  print(split_price)
+
+# Write your code below:
+
+table_7_total = [534.50, 20.0,5]       # positional arguments for the total of 1 table
+
+calculate_price_per_person(*table_7_total)     # function(*variablew/positionalarguments already matching the function)                
