@@ -87,3 +87,36 @@ tag_set.remove('spam')
 song_data_users['Retro Words'] = tag_set       #replacing the values in the above dictionary with the updated set we constructed above 
 
 print(song_data_users)
+
+
+
+
+
+
+#listed of allowed tags is what we accept as values in teh dictionary
+#song_data users has a bunch of values we don't accept as values
+#below is the process of working with sets to make song_data_users free of any tags that are not allowed.
+
+allowed_tags = ['pop', 'hip-hop', 'rap', 'dance', 'electronic', 'latin', 'indie', 'alternative rock', 'classical', 'k-pop', 'country', 'rock', 'metal', 'jazz', 'exciting', 'sad', 'happy', 'upbeat', 'party', 'synth', 'rhythmic', 'emotional', 'relationship', 'warm', 'guitar', 'fiddle', 'romance', 'chill', 'swing']
+
+song_data_users = {'Retro Words': ['pop', 'explosion', 'hammer', 'bomb', 'warm', 'due', 'writer', 'happy', 'horrible', 'electric', 'mushroom', 'shed']}
+
+tag_set = set(song_data_users['Retro Words'])   #creating a set to store the values associated with the Retro Words key in the song_data_users dictionary
+
+bad_tags = []                   #creating our own list of all the bad tags we want to run agains the tag set
+for loop in tag_set:         #looping through song_data_users
+  if loop not in allowed_tags:       #if data is NOT in allowed tags ... then append the data to bad tags
+    bad_tags.append(loop)
+
+for loop2 in bad_tags:
+  tag_set.remove(loop2)   #looping through bad tags to remove all the terms from our master tag_set
+
+song_data_users['Retro Words']= tag_set
+
+print(song_data_users)
+
+
+
+
+
+
