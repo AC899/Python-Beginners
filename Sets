@@ -303,3 +303,18 @@ print(frozen_tag_difference)
 regular_tag_sd = music_tags ^ my_tags
 print(regular_tag_sd)
 
+
+
+
+
+#any object called python that stores data is called a container i.e. lists and diectionaries are all containers
+company_name = "ToysrUs"
+company_location = tuple(('2.2', '1.8'))
+company_products = ['product 1', 'product 2', 'product 3', 'product 4', 'product 5']
+company_data = {}
+
+#creating a diction using the values we entered above
+#company data is the empty dictionary that we fill in with
+#fill in 'key string': variable for value for all the above
+company_data = {'name': company_name, 'location': company_location, 'products' : company_products}
+print(company_data)
