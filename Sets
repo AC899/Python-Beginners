@@ -118,5 +118,39 @@ print(song_data_users)
 
 
 
+#set operations: .union / merging sets together
+
+prepare_to_py = {'rock', 'heavy metal', 'electric guitar', 'synth'}
+py_and_dry = frozenset({'classic', 'rock', 'electric guitar', 'rock and roll'})
+combined = prepare_to_py.union(py_and_dry)                                       # merging frozen / set together (NO DUPLICATES PRODUCED AS IT IS A SET)
+print(combined)
+pipingmethod = prepare_to_py | py_and_dry          # ALTERNATIVE method to .union .... use a |          
+print(pipingmethod)
+
+
+
+
+#Merging two sets together 
+
+song_data = {'Retro Words': ['pop', 'warm', 'happy', 'electronic'],
+             'Wait For Limit': ['rap', 'upbeat', 'romance'],
+             'Stomping Cue': ['country', 'fiddle', 'party'],
+             'Lowkey Space': ['electronic', 'dance', 'synth']}
+
+user_tag_data = {'Lowkey Space': ['party', 'synth', 'fast', 'upbeat'],
+                 'Retro Words': ['happy', 'electronic', 'fun', 'exciting'],
+                 'Wait For Limit': ['romance', 'chill', 'rap', 'rhythmic'], 
+                 'Stomping Cue': ['country', 'swing', 'party', 'instrumental']}
+
+# Checkpoint 1
+new_song_data = {}
+
+# Checkpoint 2
+for key, val in song_data.items():  #looping through keys and values in song_data
+    song_tag_set = set(val)   #setting a new variable to create a set out of the looped values in song data
+    user_tag_set = set(user_tag_data[key]) #creating a set from the user_tag_data key 
+    new_song_data[key] = song_tag_set | user_tag_set  # creating a new key inside of our empty list - new_song)data     |piping the values from both sets together 
+
+print(new_song_data)
 
 
