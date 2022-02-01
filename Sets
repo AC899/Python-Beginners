@@ -31,3 +31,24 @@ song_tags.update(other_tags)        #.update allows us to add multiple elements 
 print(song_tags)
 
 
+
+
+
+# creating a set out of a dictionary keys value pairs
+
+song_data = {'Retro Words': ['pop', 'warm', 'happy', 'electric']}
+
+# new values we will want to add to th dictionary
+user_tag_1 = 'warm'
+user_tag_2 = 'exciting'
+user_tag_3 = 'electric'
+
+tag_set = set(song_data['Retro Words'])           #  converting the corresponding values for etro Words (Key) into a set 
+
+tag_set.add(user_tag_1)                           #adding the values defined above into the set we have just created 
+tag_set.add(user_tag_2)
+tag_set.add(user_tag_3)
+print(tag_set)
+
+song_data['Retro Words'] = tag_set                 #updating the original dictionary with the new values that we added above
+print(song_data)
