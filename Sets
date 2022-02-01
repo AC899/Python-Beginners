@@ -154,3 +154,17 @@ for key, val in song_data.items():  #looping through keys and values in song_dat
 print(new_song_data)
 
 
+
+
+
+
+
+#set intersection - looks for which items the sets have in common and returns those
+#intersection can be performed on multiple sets using the && operator
+
+prepare_to_py = {'rock', 'heavy metal', 'electric guitar', 'synth'}
+py_and_dry = frozenset({'classic', 'rock', 'electric guitar', 'rock and roll'})
+interesected = prepare_to_py.intersection(py_and_dry)
+print(interesected)                                 #prints 'sock' and 'electric guitar' as these are the only elements present in both sets i.e. the only intersecting elements
+
+
