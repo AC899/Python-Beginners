@@ -68,3 +68,22 @@ print(song_tags)
 
 song_tags.discard("Jelly")    #.discard does the same BUT can be used on terms that don't exist without an error      
 print(song_tags)             
+
+
+
+
+#removing data from a set.
+
+song_data_users = {'Retro Words': ['pop', 'onion', 'warm', 'helloworld', 'happy', 'spam', 'electric']}  
+
+# Write your code below!
+
+tag_set = set(song_data_users['Retro Words'])   #convering values from dictionary into a set 
+print(tag_set)                         #tag_set is only the values from the above dictionary key 
+tag_set.remove('onion')             #selecting the values we want to remove from the dictionary     
+tag_set.remove('helloworld')
+tag_set.remove('spam')
+
+song_data_users['Retro Words'] = tag_set       #replacing the values in the above dictionary with the updated set we constructed above 
+
+print(song_data_users)
