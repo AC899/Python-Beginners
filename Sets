@@ -214,3 +214,43 @@ print(difference)
              #can use the .difference_update() method to update the difference at later points into the code
 
 
+
+
+
+#splitting values from dictionaries - converting into sets - using the difference to create a loop which
+#finds the difference between song_data and the values extracted 
+song_data = {'Retro Words': ['pop', 'warm', 'happy', 'electronic', 'synth'],
+             'Wait For Limit': ['rap', 'upbeat', 'romance', 'relationship'],
+             'Stomping Cue': ['country', 'fiddle', 'party'],
+             'Lowkey Space': ['electronic', 'dance', 'synth', 'upbeat'],
+             'Back To Art': ['pop', 'sad', 'emotional', 'relationship'],
+             'Blinding Era': ['rap', 'intense', 'moving', 'fast'],
+             'Down To Green Hills': ['country', 'relaxing', 'vocal', 'emotional'],
+             'Double Lights': ['electronic', 'chill', 'relaxing', 'piano', 'synth']}
+
+user_liked_song = {'Back To Art': ['pop', 'sad', 'emotional', 'relationship']}
+user_disliked_song = {'Retro Words': ['pop', 'warm', 'happy', 'electronic', 'synth']}
+
+#THIS IS THE EASY WAY of converting dictionary values into sets
+#tag_diff = set(user_liked_song['Back To Art']) - set(user_disliked_song['Retro Words'])
+
+#retarded way of converting dictionary values into sets
+for key, val in user_liked_song.items():
+  userlikedset= set(val)
+#retarded way of converting dictionary values into sets
+for key, val in user_disliked_song.items():
+    userdislikedset = set(val)
+
+tag_diff= userlikedset.difference(userdislikedset)    #getting the difference between the values contained in the sets
+print(tag_diff)
+print(type(tag_diff))
+
+recommended_songs = {}          #creating empty dictionary
+
+for key, val in song_data.items():                 #looping through keys and values in song data
+    for tag in val:                                 #looping through val of song data dictionary
+        if tag in tag_diff:                         #if value of song data in tag_diff
+            if key not in user_disliked_song and key not in user_liked_song:       #
+                recommended_songs[key] = val                      #
+
+print(recommended_songs)
