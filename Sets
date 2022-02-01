@@ -52,3 +52,19 @@ print(tag_set)
 
 song_data['Retro Words'] = tag_set                 #updating the original dictionary with the new values that we added above
 print(song_data)
+
+
+
+
+
+
+#removing data from a set.
+#Note: items cannot be removed from a frozenset so none of this shit will work on those.
+
+song_tags = {'guitar', 'acoustic', 'folk', 'country', 'live', 'blues'}
+
+song_tags.remove('guitar')             #.remove ... removes he word guitar from the above set  
+print(song_tags)
+
+song_tags.discard("Jelly")    #.discard does the same BUT can be used on terms that don't exist without an error      
+print(song_tags)             
