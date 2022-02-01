@@ -14,3 +14,20 @@ survey_abbreviated = {genre[0:3] for genre in genre_results}     #printing the f
 print(survey_abbreviated)
 
 
+#frozen sets frozenset(ENTERARGUMENT)
+
+top_genres = ['rap', 'rock', 'pop']
+frozen_top_genres = frozenset(top_genres)      #Creating a frozen set
+print(frozen_top_genres)
+
+
+#frozen sets frozenset(ENTERARGUMENT)
+song_tags = {'country', 'folk', 'acoustic'}
+other_tags = ['live', 'blues', 'acoustic']
+
+song_tags.add('guitar')               #.add = adds single elements to a set
+song_tags.update(other_tags)        #.update allows us to add multiple elements (from a list)
+# song_tags.update("Kazoie", "banjoe")       #If you try and add a bunch of strings with this method you get each individual character  - not the term itself 
+print(song_tags)
+
+
