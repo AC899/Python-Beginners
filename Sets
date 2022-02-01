@@ -1,0 +1,16 @@
+#sets = group of elements that are unordered and do not contain duplicates.
+
+music_genres = {'country', 'punk', 'rap', 'techno', 'pop', 'latin'}
+print(music_genres)
+music2 = set(['country', 'punk', 'rap', 'techno', 'pop', 'latin'])                      #set([insertcontent)]
+print(music2)
+music_genres_3 = set(['country', 'punk', 'rap', 'pop', 'pop', 'pop'])
+print(music_genres_3)   #sets remove duplicate entries i.e. pop is mentioned twice in music_genres 3 but will only be printed once
+
+
+genre_results = ['rap', 'classical', 'rock', 'rock', 'country', 'rap', 'rock', 'latin', 'country', 'k-pop', 'pop', 'rap', 'rock', 'k-pop',  'rap', 'k-pop', 'rock', 'rap', 'latin', 'pop', 'pop', 'classical', 'pop', 'country', 'rock', 'classical', 'country', 'pop', 'rap', 'latin']
+
+survey_abbreviated = {genre[0:3] for genre in genre_results}     #printing the first three words of all genres in the above list NOTE sets ignore duplicated entries 
+print(survey_abbreviated)
+
+
