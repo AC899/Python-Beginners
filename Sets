@@ -168,3 +168,49 @@ interesected = prepare_to_py.intersection(py_and_dry)
 print(interesected)                                 #prints 'sock' and 'electric guitar' as these are the only elements present in both sets i.e. the only intersecting elements
 
 
+
+
+#exercise to take out all the values of the two dictionaries - collate them into separate sets - check them for intersectionality and and add the remaining values to a new dictionary 
+song_data = {'Retro Words': ['pop', 'warm', 'happy', 'electronic', 'synth'],
+             'Wait For Limit': ['rap', 'upbeat', 'romance'],
+             'Stomping Cue': ['country', 'fiddle', 'party'],
+             'Lowkey Space': ['electronic', 'dance', 'synth', 'upbeat'],
+             'Back To Art': ['pop', 'sad', 'emotional', 'relationship'],
+             'Blinding Era': ['rap', 'intense', 'moving', 'fast'],
+             'Down To Green Hills': ['country', 'relaxing', 'vocal', 'emotional'],
+             'Double Lights': ['electronic', 'chill', 'relaxing', 'piano', 'synth']}
+
+user_recent_songs = {'Retro Words': ['pop', 'warm', 'happy', 'electronic', 'synth'],
+                     'Lowkey Space': ['electronic', 'dance', 'synth', 'upbeat']}
+
+
+for key, val in song_data.items():     #looping through all teh values in the above dict values
+    song_tag_set = set(val)             #creating variable to save the dictionary values as sets
+
+for keys, vals, in user_recent_songs.items():
+    user_tag_set = set(vals)
+
+tags_int = user_tag_set.intersection(song_tag_set)   #running intersection to see what values are held in user_recent_songs vs song_data
+
+recommended_songs = {}
+
+for key, val in song_data.items():             #looping through song data dictionary values / keys
+    for tag in val:                            #lopping temp variable in the value of song data dictionary
+        if tag in tags_int:               #if tag(which is looping song data values) is in tags_int
+            if key not in user_recent_songs:    # if key from song_data is not in user_recent songs 
+                recommended_songs[key] = val     #we append the value to recommended songs 
+
+
+
+
+
+
+#set difference: use the .difference() operator to return the differing elements of a set
+
+prepare_to_py = {'rock', 'heavy metal', 'electric guitar', 'synth'}
+py_and_dry = frozenset({'classic', 'rock', 'electric guitar', 'rock and roll'})
+difference = prepare_to_py.difference(py_and_dry)                       #use . difference to calculate difference in the sets
+print(difference)
+             #can use the .difference_update() method to update the difference at later points into the code
+
+
