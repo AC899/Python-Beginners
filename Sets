@@ -234,10 +234,10 @@ user_disliked_song = {'Retro Words': ['pop', 'warm', 'happy', 'electronic', 'syn
 #THIS IS THE EASY WAY of converting dictionary values into sets
 #tag_diff = set(user_liked_song['Back To Art']) - set(user_disliked_song['Retro Words'])
 
-#retarded way of converting dictionary values into sets
+#alt way of converting dictionary values into sets
 for key, val in user_liked_song.items():
   userlikedset= set(val)
-#retarded way of converting dictionary values into sets
+
 for key, val in user_disliked_song.items():
     userdislikedset = set(val)
 
@@ -254,3 +254,8 @@ for key, val in song_data.items():                 #looping through keys and val
                 recommended_songs[key] = val                      #
 
 print(recommended_songs)
+
+
+
+
+
