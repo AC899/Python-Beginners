@@ -277,3 +277,29 @@ for key, val in user_song_history.items():
 unique_tags = friend_tags ^ user_tags   #gettting the symetrical differnece between the two sets of values - using the ^ operator is easier than typical symmetric difference()
 print(unique_tags)
 
+
+
+
+#Alternative exercises of ways to collate and pay with data in set form / extracting from a dictionary at the beginning 
+
+music_tags = {'pop', 'warm', 'happy', 'electronic', 'synth', 'dance', 'upbeat'}
+
+#creating a frozen set
+my_tags = frozenset({'pop', 'electronic', 'relaxing', 'slow','synth'})
+
+#creating a frozenset based on the union of my tags and music tags
+frozen_tag_union = frozenset(music_tags.union(my_tags))
+
+
+#storing the interesection of musictags and mytags i.e. the words both have in common
+regular_tag_intersect = music_tags & my_tags
+print(regular_tag_intersect)
+
+#getting the differnece between my tags and music tags and saving as a frozen set
+frozen_tag_difference = my_tags - music_tags
+print(frozen_tag_difference)
+
+#Getting the symmetrical difference between music_tags and my_tags 
+regular_tag_sd = music_tags ^ my_tags
+print(regular_tag_sd)
+
