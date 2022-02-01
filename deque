@@ -1,0 +1,29 @@
+#dequ containers are an alternative to lists where storing and modify large amounts of information is necessesayr
+#dictionaries are great for storing data - deques are optimised for appending and popping data to the front and back
+
+
+from collections import deque
+
+# csv data read from a function that is not defined in the body of the challenge
+csv_data = process_csv_supplies()[1:]
+
+# Here is a sample of 2 elements in csv_data:
+# [ ['nylon', '10', 'unimportant'], ['wool', '1', 'important'] ]
+
+# Write your code below!
+supplies_deque = deque()  # empty supplies deque
+
+for i in csv_data:
+    if i[2] == 'important':
+        supplies_deque.appendleft(tuple(row))
+    else:
+        supplies_deque.append(tuple(row))
+
+print(supplies_deque)
+
+ordered_important_supplies = deque()
+for i in range(25):   #creating a loop that grabs the first 25 elements of supplies deque and appends to our new deque
+      ordered_important_supplies.append(supplies_deque.popleft())  #
+
+
+
