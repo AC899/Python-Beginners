@@ -330,3 +330,17 @@ print(online_count({
     "Bob": "offline",
     "Eve": "online",
 }))
+
+
+
+
+
+#checking variable types using isinstance(variable, int/string)
+#useful if we want to find out if the variable is a number or string
+
+def only_ints(x,y):
+    if isinstance(x, int) == True and isinstance(y, int) ==True:   #is is true that x and y are intergers 
+        return True  #return True 
+    else:
+        return False
+print(only_ints(2,3))
