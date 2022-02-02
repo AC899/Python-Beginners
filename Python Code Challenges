@@ -298,3 +298,16 @@ for i in initial_letter:
 #splitting all the letters and numbers from the input
 only_letters = ''.join([i for i in initial_letter if not i.isdigit()])    #LOOP to remove all letters from the string
 only_numbers = ''.join([loop for loop in initial_letter if not loop.isalpha()]) #LOOP to remove all digits from the string
+
+
+
+
+# function to return the middle character of any inputted string
+def mid(string):
+    if len(string) %2 ==0:                    #if length of the string is even we are printing "" i.e. blank as there is no middle 
+        print("")
+    else:
+        offset = int(len(string) / 2)          #defined the halfway point of the string 
+        return string[offset: offset + 1]     # returned the stringhalfwaypoint BUT added 1 because the index of teh string starts at 0 and the length does not 
+
+print(mid("Hell"))
