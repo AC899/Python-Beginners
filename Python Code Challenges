@@ -311,3 +311,22 @@ def mid(string):
         return string[offset: offset + 1]     # returned the stringhalfwaypoint BUT added 1 because the index of teh string starts at 0 and the length does not 
 
 print(mid("Hell"))
+
+
+
+
+
+
+#function to return the people who are online taking a dictionary as an input
+
+def online_count(dictionary):
+    for key,value in dictionary.items():
+        if value == 'online':
+            print(key,value)
+
+
+print(online_count({
+    "Alice": "online",
+    "Bob": "offline",
+    "Eve": "online",
+}))
