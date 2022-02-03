@@ -344,3 +344,15 @@ def only_ints(x,y):
     else:
         return False
 print(only_ints(2,3))
+
+
+
+#converting a string into a list and joining all characters with a full stop 
+
+def add_dots(string):
+    new = list(string)        #type list(string we want to convert into a list) to get a break down of every character
+    final = '.'.join(new)    #the above list is currently split out as [h,e,l,l,o] = we use '.' join to put them all together with full stops
+    return final
+
+print(add_dots("hello"))
+
