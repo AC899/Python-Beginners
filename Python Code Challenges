@@ -389,3 +389,14 @@ def flatten(word):
 print(flatten([[1, 2], [3, 4]]))
 
 
+
+
+
+#creating a function to take away the largest number from the smallest in any given list
+
+def largest_difference(list):
+    list.sort()                 #sort the list by numerical order
+    difference = list[-1] - list[0]  #as the list is now sorted we take the index(highest -1) and index lowest (0) and subtract them
+    return difference
+
+print(largest_difference([1, 2, 3,6]))
