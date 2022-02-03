@@ -375,3 +375,17 @@ def is_anagram(string1, string2):
 
 print(is_anagram("typhoon", "opython"))
 
+
+
+
+
+#flattening lists - taking multiple lists and converting them into ibe kusts
+#list comprehension - creating a new list balued on the balues of an existing list 
+
+def flatten(word):
+    new = [item for item2 in word for item in item2]    #Method 1: list comprehension - temp variable for temp2 variable in variable for temp variable in temp2variable
+    return new
+
+print(flatten([[1, 2], [3, 4]]))
+
+
