@@ -417,3 +417,16 @@ def up_down(x):
 print(up_down(6))
 #def up_down(x):    A WAY TO DO THE ABOVE IN ONE LINE OF CODE - LOL 
     #return (x-1, x+1)
+
+
+
+
+#counting a string with the highest number of zeros
+
+def consecutive_zeros(x):    
+    split = x.split('1')     #splitting the 1st out of the string 
+    split.sort()            #sorting the 0s left from smallest to largest in the below string i.e. 0 00 000
+    return split[-1]        #return the final index from split (the biggest number of zeros as we have sorted from lowest to highest) 
+
+
+print(consecutive_zeros("1001101000110"))
