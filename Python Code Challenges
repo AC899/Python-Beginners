@@ -400,3 +400,20 @@ def largest_difference(list):
     return difference
 
 print(largest_difference([1, 2, 3,6]))
+
+
+
+
+
+# defining a function that takes one input / returns two numbers (one less than the input and one higher)
+
+def up_down(x):
+    original = x                #saving the original interger as original variable
+    x_updated = x -1            #adding 1 to x for the first return
+    y_updated = original + 1    #subtracting 1 from x for the second return
+    thistuple = (x_updated , y_updated)       #saving both to a tuple to be returned
+    return thistuple
+
+print(up_down(6))
+#def up_down(x):    A WAY TO DO THE ABOVE IN ONE LINE OF CODE - LOL 
+    #return (x-1, x+1)
