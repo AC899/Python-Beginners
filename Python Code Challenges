@@ -453,3 +453,15 @@ def convert(list):
     return converter
 
 print(str(convert([1, 2, 3])))
+
+
+
+
+
+#converting a list of intergers into a string
+
+def convert(list):
+    new = ''.join(map(str,list))    #the join function brings elements of the list into a string format 
+    return new
+
+print(convert(([1, 2, 3])))
