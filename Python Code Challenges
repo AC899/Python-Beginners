@@ -477,3 +477,14 @@ def zipper(a,b):
 
 print(zipper([1,2,3,4], [1,2,3,4,5]))      #Note if we have an uneven amount of numbers on the lists it doesn't print the uneven one 
 
+
+
+
+
+#returning number of arguments placed in a function - args allows multiple positional arguments
+def param_count(*args):
+    return len(args)
+
+print(param_count(2, 3, 4,3,4, "arg"))
+
+
