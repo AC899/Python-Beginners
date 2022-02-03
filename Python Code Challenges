@@ -465,3 +465,15 @@ def convert(list):
     return new
 
 print(convert(([1, 2, 3])))
+
+
+
+
+#function to zip two lists together 
+def zipper(a,b):
+    zipped = zip(a,b)              #zipping lists a and b togetehr
+    final = list(zipped)            # neeed to save the result as a list otherwise it only prints object
+    return final
+
+print(zipper([1,2,3,4], [1,2,3,4,5]))      #Note if we have an uneven amount of numbers on the lists it doesn't print the uneven one 
+
