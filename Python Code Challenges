@@ -356,3 +356,22 @@ def add_dots(string):
 
 print(add_dots("hello"))
 
+
+
+
+#anagram locator script for python 
+
+def is_anagram(string1, string2):
+    list1 = list(string1)            #converting both strings into lists
+    list2 = list(string2)
+
+    list1.sort()         #sorting in alphabetical order
+    list2.sort()
+
+    if list1 == list2:         #now the strings are sorted in the exact same way they should be identical i.e. an anagram so if not = false 
+        return True
+    else:
+        return False
+
+print(is_anagram("typhoon", "opython"))
+
