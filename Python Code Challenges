@@ -430,3 +430,15 @@ def consecutive_zeros(x):
 
 
 print(consecutive_zeros("1001101000110"))
+
+
+
+
+
+# simple boolean challenge 
+def triple_and(x,y,z):
+    if x == True and y == True and z == True:
+        return True
+    else:
+        return False
+
