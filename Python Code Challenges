@@ -488,3 +488,18 @@ def param_count(*args):
 print(param_count(2, 3, 4,3,4, "arg"))
 
 
+
+
+
+
+# function that doesn't accept negative numbers as inputs and automatically adds commas to interger inputs
+
+def format_number(x):
+    if x >=0:
+        number_with_commas = "{:,}".format(x)     #adding commas to an interger
+        print(number_with_commas)
+    else:
+        return False
+
+print(format_number(10000))
+
