@@ -442,3 +442,14 @@ def triple_and(x,y,z):
     else:
         return False
 
+
+
+
+
+#converting a list of intergers into a string 
+
+def convert(list):
+    converter = str(list)
+    return converter
+
+print(str(convert([1, 2, 3])))
