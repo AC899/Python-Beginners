@@ -148,3 +148,8 @@ print(reverse_string("ikessdaM"))
 
 
 
+def string(word):
+    x = word[::-1]      #reversing a string 
+    return x
+
+
