@@ -22,3 +22,15 @@ if x == y or x + y ==5:             #AND = first statement is false but only one
 if not (x == y) and x + y ==5:
     print("ran")                #NOT = REVERSES THE VALUE OF THE STATEMENT i.e. first is false and second is true
                                 #x does not equal to Y but we are reversing value by using NOT and x+y=5 (true) so we print ran as we have two true staetments 
+
+
+
+# if number is a multiple of 4 - elif number is a multiple of 2 else the number is odd 
+number = int(input("input a number "))
+
+if number % 4 ==0:
+    print("This number is a multiple of 4")
+elif number % 2 == 0:
+    print("This number is a multiple of 2")
+else:
+    print("This number is odd")
