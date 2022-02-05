@@ -153,3 +153,9 @@ def string(word):
     return x
 
 
+
+
+my_hair = 'Brown'
+
+print(f'lets talk about {my_hair}')   #the f means format
+
