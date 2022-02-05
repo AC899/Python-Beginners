@@ -42,3 +42,12 @@ my_dict = {"apple": 2.50, "orange": 4.99, "banana": 0.59}
 
 keys = (my_dict.keys())        #(dictionaryname.keys())
 print(keys)
+
+
+#combining dictionaries with a piping method 
+squares = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+dict2 = {'c': 3, 'd': 4}
+
+dict3 = squares | dict2    #combining dictionaries with a pipe 
+print(dict3)
+
