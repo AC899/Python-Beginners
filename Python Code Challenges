@@ -524,3 +524,14 @@ print(word_length_dictionary(["apple", "dog", "cat"]))
 max = "Masc"
 for i in max:
     print(i,end="")    #printing all on the same line / modifying a print statement 
+
+
+
+
+# adding full stops in between sentences and finishing the sentence 
+def string(string):
+    string
+    punctuations = "...."
+    return(string[0:2] + punctuations + string[0:2] + punctuations + string)
+
+print(string("mah"))
