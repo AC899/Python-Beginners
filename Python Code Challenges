@@ -593,3 +593,19 @@ def string_int(txt):
 
 print(string_int('100'))
 
+
+
+
+
+
+# using math module to convert mass from heigh and radius
+import math
+def weight(r,h):
+	vol = math.pi*pow(r,2) * h
+	kg = vol /1000
+	return("Mass in KG %.2f" % kg)     #limiting output to 2 decimal places
+
+print((weight(4, 10)))
+print(weight(30, 60))
+print(weight(15,10))
+
