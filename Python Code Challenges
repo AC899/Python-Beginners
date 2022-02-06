@@ -609,3 +609,12 @@ print((weight(4, 10)))
 print(weight(30, 60))
 print(weight(15,10))
 
+
+
+#datetime module playing around with a function to only return true is Xmas is inputted 
+import datetime
+def time_for_milk_and_cookies(date):
+	if date.month == 11 and date.day==24:
+		return True
+	else:
+		return False
