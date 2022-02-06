@@ -405,6 +405,8 @@ print(largest_difference([1, 2, 3,6]))
 
 
 
+
+
 # defining a function that takes one input / returns two numbers (one less than the input and one higher)
 
 def up_down(x):
@@ -547,3 +549,26 @@ def dis(price,discount):
 	return(price, total) 
 
 print(dis(1500,50))
+
+
+
+#Star Wars question responder 
+def relation_to_luke(string):
+	darth_vader = "Luke I am your father"
+	Leia = "Luke, I am your sister."
+	Han = "Luke, I am your brother in law."
+	r2DT = "Derp"
+	if string == "darth vader":
+		return(darth_vader)
+	if string == "leia":
+			return(Leia)
+	if string == "Han":
+				return(Han)
+	else:
+		return(r2DT)
+
+
+
+print(relation_to_luke("leia"))
+print(relation_to_luke("darth vader"))
+print(relation_to_luke("r2dt"))
