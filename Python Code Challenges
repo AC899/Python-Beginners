@@ -583,3 +583,13 @@ def series_resistance(lst):
 print(series_resistance([1, 5, 6, 3]))
 print(series_resistance([16, 3.5, 6]))
 print(series_resistance([0.5, 0.5]))
+
+
+
+# function to covnert a string to interger
+def string_int(txt):
+	converted = int(txt)
+	return converted
+
+print(string_int('100'))
+
