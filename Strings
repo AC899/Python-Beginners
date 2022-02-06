@@ -34,6 +34,9 @@ print(number("112223"))
 
 # counting the amount of times  letter appears in a string
 
+
+
+
 def number(word, x):
     count = 0
     for temp in word:                          # looping our temp variable through the word we are in putting
@@ -162,4 +165,7 @@ print(f'lets talk about {my_hair}')   #the f means format
 #USING curly brackets in  a printer string ...... 
 mar = "dark"
 print("Its fleece was white as {}.".format('snow')) #we are defining a string for the open curly bracks
-print("This place is {}".format(mar)) #we are using format, curly brackets to add a variable 
+print("This place is {}".format(mar)) #we are using format, curly brackets to add a variable
+
+#doing a tabbed list with hashes as bullets points
+print("This is a tabbed list: \n\t*Groceries\n\t*Drinks")
