@@ -17,7 +17,11 @@ def house(blue_door = "blue", red_door = "red"):     # assigning default values 
 house()                                           # can call the function without any arguments
 
 
-
+# unpacking operator * allows us to to use positional argument packing. 
+def print_order(*order_items):
+    print(order_items) 
+print_order("Juice", "Berrie", 245, "123") 
+# the arguments passedi nto the function will be stored as tuples 
 
 
 
@@ -47,6 +51,41 @@ assign_table(4,"Karla") #positional argument - VIP is now set to False by defaul
 print(tables)
 
 
+
+
+# adding an unpacking operator value of * to the dictionary 
+tables = {
+  1: {
+    'name': 'Jiho',
+    'vip_status': False,
+    'order': 'Orange Juice, Apple Juice'
+  },
+  2: {},
+  3: {},
+  4: {},
+  5: {},
+  6: {},
+  7: {},
+}
+print(tables)
+
+#function for assigning table. 
+#tablenumber[key]: name, vipstatus and order(s) are the value of the dictionary 
+def assign_table(table_number, name, vip_status=False): 
+  tables[table_number]['name'] = name
+  tables[table_number]['vip_status'] = vip_status
+  tables[table_number]['order'] = ''
+
+#function for printing order items 
+def assign_and_print_order(table_number, *order_items):
+  tables[table_number]['order']=order_items #we are assigning the order_items unpacking operator so as we can add multiple positional arguments
+  for loop in order_items:
+    print(loop)
+
+#positional argument in the assign table function we have three positional arguments to put in 
+assign_table(2, "Arwa", True) 
+assign_and_print_order(2,'Steak', 'Seabass', 'Wine Bottle') #adds the list of order items to the assign and print function - when this is printed outside of the table it is not added to the dictionary. 
+print(tables)
 
 
 
