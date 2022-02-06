@@ -535,3 +535,15 @@ def string(string):
     return(string[0:2] + punctuations + string[0:2] + punctuations + string)
 
 print(string("mah"))
+
+
+
+
+#basic discount calculator 
+def dis(price,discount):
+	discount_fractal = discount / 100   #this is the decimal figure we need for the multiple i.e. divide discount we are looking for by 100 to make it .5. If we wanted a 50 % discount we divide 50 by 100 to get .5 
+	multiplication = discount_fractal * price    #this gives us the total amount of discount 
+	total = price - multiplication               #this lets us take  away the discount from the total price 
+	return(price, total) 
+
+print(dis(1500,50))
