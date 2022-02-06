@@ -18,7 +18,12 @@ house()                                           # can call the function withou
 
 
 
-#Function call to add argument straight into a dictionary 
+
+
+
+
+
+#Positional / keyword arguments and adding values inputted into a function directly into a dictionary 
 
 tables = {
   1: ['Jiho', False],
@@ -31,55 +36,17 @@ tables = {
 }
 print(tables)
 
-#
-def assign_table(table_number,name,vip_status = False):   #we are adding table_number as key and name,vip_status as the value
-    tables[table_number] = [name,vip_status]   #dictionaryname[functionargumentUSEDFORKEY] = [INSERT VALUE, INSERT VALUE]
-
-
-assign_table(6,"Yoni",False)    #positional argument i.e. working through the function arguments in order table number / name / vip_status
-assign_table(4,"Karla")          #positional argument 2 we can set VIP status to false by default (see function argument above) we don't need to change or input in the future
-
-assign_table(name="Martha", table_number=3, vip_status=True)    #keyword argument
-
-print(tables)
-
-
-
-
-
-# combining the * unpacking operator to cut sentences off at a particular index
-tables = {
-  1: {
-    'name': 'Jiho',
-    'vip_status': False,
-    'order': 'Orange Juice, Apple Juice'
-  },
-  2: {},
-  3: {},
-  4: {},
-  5: {},
-  6: {},
-  7: {},
-}
-print(tables)
-
+# Write your code below: 
 def assign_table(table_number, name, vip_status=False):
-  tables[table_number]['name'] = name
-  tables[table_number]['vip_status'] = vip_status
-  tables[table_number]['order'] = ''     #nested keys
-
-# Write your code below:
-
-def assign_and_print_order(table_number, *order_items):
-  tables[table_number]['order'] = order_items
-  for i in order_items:
-    print(i)
-
-
-assign_table(2, "Arwa", True)
-
-assign_and_print_order(2, 'Steak', 'Seabass', 'Wine Bottle')
+  tables[table_number] = [name,vip_status]                     # updating a dictionary with the values assigned to the above  function: dictname[value] = [keynames]
+assign_table(6,"Yoni", False)#positional argument = assigning values to the function parameters in order that will now be automaticcally added into the above empty dictionary 
+print(tables)#you can see now that Yoni has been added onto the dictionary 
+assign_table(table_number = 3,name = "Martha", vip_status = True)#keyword argument i.e.attributing values to the keywords of teh functions 
 print(tables)
+assign_table(4,"Karla") #positional argument - VIP is now set to False by default in the aboce function so that doesn't need to be changed
+print(tables)
+
+
 
 
 
