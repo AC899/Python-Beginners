@@ -167,5 +167,18 @@ mar = "dark"
 print("Its fleece was white as {}.".format('snow')) #we are defining a string for the open curly bracks
 print("This place is {}".format(mar)) #we are using format, curly brackets to add a variable
 
-#doing a tabbed list with hashes as bullets points
+#Escale Sequence (doing a tabbed list with hashes as bullets points)
 print("This is a tabbed list: \n\t*Groceries\n\t*Drinks")
+
+#Escape Sequence (inserting a quote in a print statement)
+print("\'this is a quote' whereas this is not")
+
+#Escape Sequence (inserting a single backslash
+print("\\this is  double backslash")
+
+#Escape Sequence (inserting a double quotation bracket
+print("\"This is how you use a douable quote\"")
+
+#Escape Sequence (inserting a horizontal tab)
+print("\twhat the fuck does this do")
+
