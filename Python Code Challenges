@@ -572,3 +572,14 @@ def relation_to_luke(string):
 print(relation_to_luke("leia"))
 print(relation_to_luke("darth vader"))
 print(relation_to_luke("r2dt"))
+
+
+#using sum to the total value of intergers in any given list as function parameter 
+
+def series_resistance(lst):
+	total = str(sum(lst))
+	return(total + " ohms")
+
+print(series_resistance([1, 5, 6, 3]))
+print(series_resistance([16, 3.5, 6]))
+print(series_resistance([0.5, 0.5]))
