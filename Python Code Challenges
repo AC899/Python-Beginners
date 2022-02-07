@@ -618,3 +618,9 @@ def time_for_milk_and_cookies(date):
 		return True
 	else:
 		return False
+
+# interger
+i = 1
+while i <6:    #amount we want to count to 
+    i +=1      #amount we want to increment the count by 
+    print(i)
