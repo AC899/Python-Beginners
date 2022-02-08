@@ -1,0 +1,16 @@
+import math
+import unittest 
+
+def square_root(l):                #function we are looking to test 
+    return math.sqrt(l)
+
+class Testclass(unittest.TestCase):
+    def test_case1(var):                          #create a test function in the unit test class 
+        var.assertEqual(square_root(121), 11, "Should be 11")     #var.assertEqual means func parameter (121) is equal to 11 
+    def test_case2(var):
+        var.assertEqual(square_root(20), 4.47213595499958, "Should be 4.47213595499958")          #the syntax we add is a guide i.e. the swrt of 20 'should be 4.4...' so if it flags up as an incorrect equal to value we know what it should be by looking at the comment 
+    def test_case3(var):
+        var.assertEqual(square_root(35), 5.916079783099616, "should be 5.916079783099616" )
+
+if __name__ == "__main__":
+    unittest.main()
