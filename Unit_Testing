@@ -1,3 +1,11 @@
+#AssertAlmostEqual: With rounding off at 5th decimal the comparison is done.
+#AssertTrue(x): Boolean expression x is true when evaluated.
+#AssetFalse(x): Boolean expression x is false when evaluated.
+#Assertequal(a,b): a = b
+#AssertIn(a,b): a in b
+#AssertIs(a,b): a is b
+#AssertIsNone(a): a is null
+
 #Unit testing - when we want to return errors if something is not present
 
 instrument_catalog = {
@@ -38,3 +46,6 @@ class Testclass(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+    
+    
+    
