@@ -1,3 +1,24 @@
+#random password generator 
+
+import random
+import string
+# select 2 digits at random
+digits = random.choices(string.digits, k=2)
+# select 13 uppercase and lowecase letters at random
+letters = random.choices(string.ascii_uppercase + string.ascii_lowercase, k=13)
+#if we wanted to select just lower oer uppercase we would use the following:
+#letters = random.choices(string.ascii_lowercase,k=13)
+# joining the random digits and letters
+sample = random.sample(digits + letters, 15)
+print(sample)   #this would print the password string as a list i.e. p,6,4
+result = ''.join(sample)    # use the ''.join(sample) function to join the string 
+print(result)
+
+
+
+
+
+
 # radians to degrees converter function with user input - simple 
 
 import time
