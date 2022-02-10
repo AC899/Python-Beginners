@@ -1,0 +1,9 @@
+#Banner design for recon tool 
+
+import pyfiglet
+import sys
+import socket
+from datetime import datetime
+
+ascii_banner = pyfiglet.figlet_format("RECON TOOL", font = "slant")
+print(ascii_banner)
