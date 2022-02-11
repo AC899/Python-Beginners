@@ -1,9 +1,30 @@
-#Banner design for recon tool 
+#Distance between Oxford and London:	60 miles
+#Distance between planet Earth and the Moon:	383,400km
+#Number of km in 1 mile:	1.609km
+#Number of working days per week:	5
+#Number of weeks in a year:	52
 
 import pyfiglet
 import sys
 import socket
 from datetime import datetime
+import time
+import subprocess
+import os
 
+#logo / banner
 ascii_banner = pyfiglet.figlet_format("RECON TOOL", font = "slant")
 print(ascii_banner)
+
+time.sleep(0.5)
+
+#nslookup
+a = input("\nEnter your target website [example: google.com] ")
+time.sleep(0.5)
+print(os.system('nslookup ' +a))
+
+
+#directorybuster tool
+#split the input on the final / and FUZZ that parameter
+
+
