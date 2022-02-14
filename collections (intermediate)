@@ -28,3 +28,23 @@ for i in range(25):   #creating a loop that grabs the first 25 elements of suppl
 
 
 
+#collections 
+
+from collections import UserString
+str_name = 'python powered patterned products'
+str_word = 'patterned'
+
+# Write your code below!
+
+# Checkpoint #1
+class SubtractString(UserString):
+
+    def __sub__(self, other):# method defined for substituting elements of self with other 
+        if other in self.data:  #if other in self
+            self.data = self.data.replace(other, '')  #replacing the term that was in other which is now found in self with an empty string ... if strname was 'moose' it would print the full str_name because moose is not in other so it would not replace an instance of it in strname to become an empty string 
+
+# Checkpoint #2
+subtract_string = SubtractString(str_name)  #newobject = instanceofclass(argument) 
+subtract_string - str_word    #specifying the minus the value for 'other' 
+print(subtract_string)
+
