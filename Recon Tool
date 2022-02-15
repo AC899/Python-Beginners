@@ -1,24 +1,19 @@
 import pyfiglet
 import sys
 import socket
-from datetime import datetime
 import time
-import subprocess
 import os
+import requests
 
 #logo / banner
 ascii_banner = pyfiglet.figlet_format("RECON TOOL", font = "slant")
-print(ascii_banner)
+print(ascii_banner + "Automating Enumeration since 2022")
 
 time.sleep(0.5)
 
 #nslookup
-a = input("\nEnter your target website [example: google.com] ")
+nsip = input("\nEnter your target website [example: google.com] : ")
 time.sleep(0.5)
-print(os.system('nslookup ' +a))
-
+print(os.system('nslookup ' + nsip))
 
 #directorybuster tool
-#split the input on the final / and FUZZ that parameter
-
-
