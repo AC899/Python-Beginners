@@ -12,8 +12,11 @@ print(ascii_banner + "Automating Enumeration since 2022")
 time.sleep(0.5)
 
 #nslookup
+#Use Pyfiglet to display results differently for ns to dirbuster 
 nsip = input("\nEnter your target website [example: google.com] : ")
 time.sleep(0.5)
 print(os.system('nslookup ' + nsip))
 
 #directorybuster tool
+#Insert location to upload a wordlist locally for FUZZ ing 
+#
