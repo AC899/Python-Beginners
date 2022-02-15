@@ -19,4 +19,5 @@ print(os.system('nslookup ' + nsip))
 
 #directorybuster tool
 #Insert location to upload a wordlist locally for FUZZ ing 
-#
+#shell out script to return a full directory fuzzing 
+
