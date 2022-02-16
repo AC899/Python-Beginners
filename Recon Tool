@@ -17,7 +17,16 @@ nsip = input("\nEnter your target website [example: google.com] : ")
 time.sleep(0.5)
 print(os.system('nslookup ' + nsip))
 
-#directorybuster tool
-#Insert location to upload a wordlist locally for FUZZ ing 
-#shell out script to return a full directory fuzzing 
 
+#directorybuster tool
+# Entering path to the wordlists for Fuxxing 
+
+filename = input("Enter the path of the wordlist you want to use for directory busting: ")
+out = os.path.isfile(filename)   #verifies that the path provided in filename is a filename on the local system
+
+
+#loop needs to work correctly so as that it accepts False a fwe times and then registers a True
+while (out ==False):
+    filename = input("This directory does not exist - please enter the full file path i.e. C:/Desktop/wordlist.doc")
+else:
+    print("The wordlist you have chosen is " + filename)
