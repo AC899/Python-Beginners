@@ -30,3 +30,15 @@ while (out ==False):
     filename = input("This directory does not exist - please enter the full file path i.e. C:/Desktop/wordlist.doc")
 else:
     print("The wordlist you have chosen is " + filename)
+
+
+nsip = "google.com"  #REMOVE ME FROM FINAL
+#WORDLIST TO USE - /Users/anilcarrier/Desktop/namelist.txt
+#Opening the filename and outputting the text in string format
+with open(filename, 'r') as file:
+    for FUZZ in file:
+        url = "https://" + nsip + '/' + FUZZ
+        r = requests.get(url)
+        if r.status_code ==404:
+            print("CHANGE SC TO 200 " + url)
+
