@@ -1,19 +1,23 @@
-# doesn't work properly - needs to be more condensesd 
-try:
-    ip = socket.gethostbyname(nsip)  #getting the ip address of a domain name
-    print("Socket successfully created " + "\nIP address of " + nsip + " is " + ip)  #DNS query issue solved
-except socket.error as error_code:    #
-    print("Socket creation failed.\n{}".format(error_code))
+import threading
+import socket
 
-def portconnect(ip,port):
+target = '10.10.11.105'
+#ip = socket.gethostbyname(target)
+
+def portscan(port):
+
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #getting IPV4 and TCPstream
+    s.settimeout(0.5)#setting timeout
+
     try:
-        s.connect((ip,port))    #execute when ip, port are connecting (returning True)
-        return True
+        connect = s.connect((target,port))
+        print('Port :',port,"is open.")
+        connect.close()
     except:
-        return None
+        pass
+r = 1
+for x in range(1,100):
+    t = threading.Thread(target=portscan,kwargs={'port':r})
+    r += 1
+    t.start()
 
-for port in range(1,65535):
-    value = portconnect(ip,port)
-    if value == True:
-        print("port opened on {}".format(port))
-        break
