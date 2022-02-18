@@ -1,15 +1,17 @@
 from tkinter import *
-from pythonping import ping
+
+#Make the box where you enter the link expand out so as the user can see their full input
+#make the result a clickable link so as the user can click it and it copies instantly
+#
 
 def link():
     appended_link = "https://drive.google.com/uc?id="
     string = e.get()
-    place_res.set(string)
+    # place_res.set(string)
     split = string.split('/')
     id_tag = split[5]
     complete_link = appended_link+id_tag
     res.set(complete_link)
-
 
 # object of tkinter
 # and background set for light grey
@@ -17,32 +19,32 @@ master = Tk()
 master.configure(bg='light grey')
 
 # variable Classes in tkinter
-place_res = StringVar();
+# place_res = StringVar();
 res = StringVar();
 
 # creating label for each information
 # name using widget Label
-Label(master, text="Enter place :",
+Label(master, text="Enter Google Drive Link:",
       bg="light grey").grid(row=0, sticky=W)
-Label(master, text="Place :",
+# Label(master, text="Link you typed :",
+#       bg="light grey").grid(row=1, sticky=W)
+Label(master, text="Sharable Google Drive Link :",
       bg="light grey").grid(row=1, sticky=W)
-Label(master, text="Country Address :",
-      bg="light grey").grid(row=2, sticky=W)
 
 # creating label for class variable
 # name using widget Entry
-Label(master, text="", textvariable=place_res,
-      bg="light grey").grid(row=1, column=1, sticky=W)
+# Label(master, text="", textvariable=place_res,
+#       bg="light grey").grid(row=1, column=1, sticky=W)
 Label(master, text="", textvariable=res,
-      bg="light grey").grid(row=2, column=1, sticky=W)
+      bg="light grey").grid(row=1, column=1, sticky=W)
 
 e = Entry(master)
 e.grid(row=0, column=1)
 
 # creating a button using the widget
 # Button that will call the submit function
-b = Button(master, text="Show", command=link)
+b = Button(master, text="Convert", command=link)
 b.grid(row=0, column=2, columnspan=2,
-       rowspan=2, padx=5, pady=5)
+       rowspan=2, padx=5, pady=2)
 
 mainloop()
