@@ -4,6 +4,7 @@ import socket
 import time
 import os
 import requests
+from ping3 import ping, verbose_ping
 
 #logo / banner
 ascii_banner = pyfiglet.figlet_format("RECON TOOL", font = "slant")
@@ -12,10 +13,16 @@ print(ascii_banner + "Automating Enumeration since 2022")
 time.sleep(0.5)
 
 #nslookup
-#Use Pyfiglet to display results differently for ns to dirbuster 
 nsip = input("\nEnter your target website [example: google.com] : ")
-time.sleep(0.5)
-print(os.system('nslookup ' + nsip))
+nsresult = socket.gethostbyname(nsip)
+print("IP address of host is {}".format(nsresult))
+
+pingresult = ping(nsip)
+if pingresult >= 0:
+    print('host is up and responding to ping requests')
+else:
+    print('host is down and is not responding to ping requests')
+
 
 
 #directorybuster tool
