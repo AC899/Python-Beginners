@@ -1,0 +1,7 @@
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("-verbose", help="This flag increases the verbosity of the output",  #this is the flag that will show up when a user presses the help / -h flag in terminal
+                    action="store_true")
+args=parser.parse_args()
+if args.verbose:
+    print("verbosity turned on")  #if the flag is used: Pprogramname.py -verbose (it will print this output)
