@@ -1,7 +1,13 @@
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument("-verbose", help="This flag increases the verbosity of the output",  #this is the flag that will show up when a user presses the help / -h flag in terminal
+parser.add_argument("-DNS", help="This flag increases the verbosity of the output",  #this is the flag that will show up when a user presses the help / -h flag in terminal
                     action="store_true")
+parser.add_argument("-DB", help="This runs a directory buster search with a default wordlist i.e. google.com/FUZZ ",  #this is the flag that will show up when a user presses the help / -h flag in terminal
+                    action="store_true")
+
+parser.add_argument("-DBwordlist", help="This specifies the wordlist you want to use for fuzzing",  #this is the flag that will show up when a user presses the help / -h flag in terminal
+                    action="store_true")
+
 args=parser.parse_args()
 if args.verbose:
     print("verbosity turned on")  #if the flag is used: Pprogramname.py -verbose (it will print this output)
