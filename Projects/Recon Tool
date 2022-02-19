@@ -46,13 +46,24 @@ print(dirbuster(''))
 
 
 
-nsip = "google.com"  #REMOVE ME FROM FINAL
-#WORDLIST TO USE - /Users/anilcarrier/Desktop/namelist.txt
-#Opening the filename and outputting the text in string format
+
+#opening file and looping through words in wordlist
+filename = '/Users/anilcarrier/Desktop/requirements.txt'
+nsip = 'google.com'
 with open(filename, 'r') as file:
-    for FUZZ in file:
-        url = "https://" + nsip + '/' + FUZZ
-        r = requests.get(url)
-        if r.status_code ==404:
-            print("CHANGE SC TO 200 " + url)
+    for line in file:
+        full_url = []
+        linefinal = line.rstrip()
+        full_url.append(nsip + '/' + linefinal)
+        full_url = ''.join(full_url)
+        print(full_url)
+
+#status codes written up 
+bustingrequests = requests.get(full_url)
+if x.status_code == 200:
+    print("This url exists")
+    if x.status_code == 403:
+        print("Forbidden Url: exists but the server is not letting you access")
+        if x.status_code == 301:
+            print("Url has been moved permanently")
 
