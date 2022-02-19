@@ -12,31 +12,38 @@ print(ascii_banner + "Automating Enumeration since 2022")
 
 time.sleep(0.5)
 
-#nslookup
-nsip = input("\nEnter your target website [example: google.com] : ")
-nsresult = socket.gethostbyname(nsip)
-print("IP address of host is {}".format(nsresult))
+#nslookup function 
+def NSIP(nsip):
+    while True:
+        try:
+            nsip = input("\nEnter your target website [example: Google.com] (s to skip onto the next step) : ")
+            if nsip == "s" or nsip == "skip":
+                break
+            resolvedip = socket.gethostbyname(nsip)
+            pingresult =ping(resolvedip)
+        except:
+            print("Host appears to be down. Couldn't lookup: " + nsip)
+            continue
+        print("IP address:" + resolvedip +"\nHost is LIVE transmitted a packet back within %.5s" % str(pingresult) + " per second")
 
-pingresult = ping(nsip)
-if pingresult >= 0:
-    print('host is up and responding to ping requests')
-else:
-    print('host is down and is not responding to ping requests')
-
-
-
-#directorybuster tool
-# Entering path to the wordlists for Fuxxing 
-
-filename = input("Enter the path of the wordlist you want to use for directory busting: ")
-out = os.path.isfile(filename)   #verifies that the path provided in filename is a filename on the local system
+print(NSIP(""))
 
 
-#loop needs to work correctly so as that it accepts False a fwe times and then registers a True
-while (out ==False):
-    filename = input("This directory does not exist - please enter the full file path i.e. C:/Desktop/wordlist.doc")
-else:
-    print("The wordlist you have chosen is " + filename)
+def dirbuster(filename):
+    while True:
+        try:
+            filename = input("Enter the path of the wordlist you want to use for directory busting (s to skip onto the next step) : ")
+            if not os.path.exists(filename):
+                print("This directory does not exist - please enter the full file path i.e. C:/Desktop/wordlist.doc")
+            if filename == "s" or filename == "skip":
+                break
+        except:
+            continue
+        if not os.path.exists(filename) == False:
+            print("This is a valid file")
+
+print(dirbuster(''))
+
 
 
 nsip = "google.com"  #REMOVE ME FROM FINAL
