@@ -78,3 +78,25 @@ digit_counter(firstlabel)    #running the function through the label
 btn= Button(text='Terminate', width = 50, command=root.destroy)     #kill the window by pressing the button
 btn.pack()
 root.mainloop()
+
+
+
+
+
+
+
+from tkinter import *
+from tkinter.colorchooser import *
+
+root = Tk()
+root.geometry('250x100')
+
+def mycolor():
+    color = askcolor()   #allows user to pick from a selection of colour pallets
+    mylabel = Label(text='This is your preferred color', bg=color[1]).pack() #taking the first choice from colour variable and using it as the background in the window
+    print(color) #prints the hexidecimal code for the colour
+
+
+btn = Button(text='Choose colour', command=mycolor).pack()
+
+root.mainloop()
