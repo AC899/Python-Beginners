@@ -3,11 +3,11 @@ from tkinter import *
 
 root = Tk() #created the mainframe window. This becomes visible when you use the mainloop (below)
             #creating another GUI in the root
-subroot = Tk()  #open a second window to accompany main root - loop below
+# subroot = Tk()  #open a second window to accompany main root - loop below
 
 def btn1():
     txt1 = txt.get()  #newvariable to grab and return the stringvariable inputted in the mytext entry
-    Label(text=txt1, fg='green', bg='blue').pack()
+    Label(text=txt1, fg='green', bg='light grey').pack()
 def btn2():
     Label(text='Functionreturn2', fg='green', bg='yellow').pack()
 
@@ -16,9 +16,7 @@ txt = StringVar()  #this is the string variable used for text entry
 root.title("GUI Application")  #naming the root window
 root.geometry('500x500+0+0') #sizing x/y axis / positioning x/y axis
 
-subroot.title("Second Window")
-
-
+# subroot.title("Second Window")
 
 #creating a text box for user to enter input
 mytext = Entry(text = txt).pack()  #move this around in between labels / buttons by pasting it between them
@@ -28,6 +26,20 @@ mylabel2 = Label(text='First Text Label', fg = 'blue', bg = 'red').pack() #place
 Btn1 = Button(text='submit', fg ='light pink', command=btn1).pack()   #clickable button
 Btn2 = Button(text='open', fg='light blue', command=btn2).pack()
 
+#MENU FOR WINDOW - Menu() class
+Dropdown = Menu()
+filemenu = Menu()
+
+filemenu.add_command(label ='New Project')
+filemenu.add_command(label ='Save')
+filemenu.add_command(label ='Open')
+filemenu.add_command(label ='Close')
+Dropdown.add_cascade(label='File', menu=filemenu)#cascade is our way to add to the dropdown menu
+
+Dropdown.add_cascade(label='edit')
+Dropdown.add_cascade(label='view')
+root.config(menu=Dropdown)
+
 # mylabel3 = Label(text='First Text Label', fg = 'pink', bg = 'blue').grid(row=1, column=1) #grid method - x is row and y is column
 # mylabel2 = Label(text='First Text Label', fg = 'blue', bg = 'red').grid(row=0, column=1, sticky='E')
 # Btn1 = Button(text='submit', fg ='light pink').grid(row=4, column=5)   #clickable button
@@ -35,5 +47,5 @@ Btn2 = Button(text='open', fg='light blue', command=btn2).pack()
 
 root.mainloop()  #this allows us to see the window
                 #Note: we don't have to use root. We can call it anything. root just tells us that it is the root / master window
-subroot.mainloop()
-
+# subroot.mainloop()
+#
