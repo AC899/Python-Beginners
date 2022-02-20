@@ -116,3 +116,8 @@ def filedialog():
 btn = Button(text='open file', width=50, command=filedialog).pack()
 
 root.mainloop()
+
+
+
+
+
