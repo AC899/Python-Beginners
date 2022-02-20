@@ -75,6 +75,6 @@ firstlabel = Label(text= 'test', fg='red', bg = 'light grey')
 firstlabel.pack()
 digit_counter(firstlabel)    #running the function through the label
 
-btn= Button(text='Terminate', width = 50, command=root.destroy)
+btn= Button(text='Terminate', width = 50, command=root.destroy)     #kill the window by pressing the button
 btn.pack()
 root.mainloop()
