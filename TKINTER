@@ -83,8 +83,6 @@ root.mainloop()
 
 
 
-
-
 from tkinter import *
 from tkinter.colorchooser import *
 
@@ -98,5 +96,23 @@ def mycolor():
 
 
 btn = Button(text='Choose colour', command=mycolor).pack()
+
+root.mainloop()
+
+
+
+
+from tkinter import *
+from tkinter.filedialog import *
+
+root = Tk()
+root.geometry('250x250')
+
+def filedialog():
+    fileopen= askopenfile()
+    mylabel = Label(text=fileopen).pack()
+    mylabel2 = Label(text=os.path.abspath(fileopen)).pack()
+
+btn = Button(text='open file', width=50, command=filedialog).pack()
 
 root.mainloop()
