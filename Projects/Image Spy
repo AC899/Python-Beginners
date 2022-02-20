@@ -1,0 +1,23 @@
+#grabbing metadata from image and displaying location 
+
+from PIL import Image
+from PIL.ExifTags import TAGS, GPSTAGS
+from GPSPhoto import gpsphoto
+from geopy.geocoders import Nominatim
+
+# nolat = gpsphoto.getGPSData("/Users/anilcarrier/Desktop/img.jpeg")
+exif = gpsphoto.getGPSData("/Users/anilcarrier/Desktop/Kodak.jpeg")
+
+# for data in nolat:
+#     if 'Latitude' in data:
+#         print("Metadata found")
+#         break
+#     else:
+#         print("No metadata found")
+#         break
+
+geolocator = Nominatim(user_agent="geoapiExercises")
+location = geolocator.geocode(exif['Latitude']+exif['Longitude'])
+
+print(exif)
+print(location)
