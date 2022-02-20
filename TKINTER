@@ -49,3 +49,32 @@ root.mainloop()  #this allows us to see the window
                 #Note: we don't have to use root. We can call it anything. root just tells us that it is the root / master window
 # subroot.mainloop()
 #
+
+
+
+
+#creating a digit counter 
+
+from tkinter import *
+
+counter = 0
+def digit_counter(firstlabel):
+    counter = 0
+    def digit():
+        global counter
+        counter +=1
+        firstlabel.config(text=str(counter))
+        firstlabel.after(10,digit)
+    digit()
+
+root = Tk()
+root.title("Digit counter")
+root.geometry('500x500+200+0') #sizing x/y axis / positioning x/y axis
+
+firstlabel = Label(text= 'test', fg='red', bg = 'light grey')
+firstlabel.pack()
+digit_counter(firstlabel)    #running the function through the label
+
+btn= Button(text='Terminate', width = 50, command=root.destroy)
+btn.pack()
+root.mainloop()
