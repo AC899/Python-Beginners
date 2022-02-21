@@ -1,9 +1,5 @@
 from tkinter import *
-
-#Make the box where you enter the link expand out so as the user can see their full input
-#make the result a clickable link so as the user can click it and it copies instantly
-#
-
+#function for generating googledrivelink
 def link():
     appended_link = "https://drive.google.com/uc?id="
     string = e.get()
@@ -13,38 +9,31 @@ def link():
     complete_link = appended_link+id_tag
     res.set(complete_link)
 
-# object of tkinter
-# and background set for light grey
 master = Tk()
+master.title('Google Drive Link Generator')
+master.geometry('700x70')
 master.configure(bg='light grey')
 
-# variable Classes in tkinter
-# place_res = StringVar();
 res = StringVar();
 
-# creating label for each information
-# name using widget Label
-Label(master, text="Enter Google Drive Link:",
+Label(master, text="Enter Google Drive Link:", font=('Helvetica', 15),
       bg="light grey").grid(row=0, sticky=W)
-# Label(master, text="Link you typed :",
-#       bg="light grey").grid(row=1, sticky=W)
+
 Label(master, text="Sharable Google Drive Link :",
       bg="light grey").grid(row=1, sticky=W)
 
-# creating label for class variable
-# name using widget Entry
-# Label(master, text="", textvariable=place_res,
-#       bg="light grey").grid(row=1, column=1, sticky=W)
-Label(master, text="", textvariable=res,
-      bg="light grey").grid(row=1, column=1, sticky=W)
+Entry(master, text="", textvariable=res, bd=0, state='readonly',
+      ).grid(row=1, column=1, sticky=W)
 
+#entry button - input here is sent to link function
 e = Entry(master)
 e.grid(row=0, column=1)
 
-# creating a button using the widget
-# Button that will call the submit function
-b = Button(master, text="Convert", command=link)
-b.grid(row=0, column=2, columnspan=2,
-       rowspan=2, padx=5, pady=2)
+# Convert Button that will call the submit function
+b = Button(master, text="Convert", command=link, width = 30)
+b.grid(row=0, column=2,
+       padx=10, pady=10)
 
 mainloop()
+
+#https://drive.google.com/file/d/1Hi_mW_e5fZOBk47I2-C1k_M_uzWMeN_i/view?usp=sharing
